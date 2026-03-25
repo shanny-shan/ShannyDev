@@ -1,19 +1,5 @@
-<script setup>
-import { Sunny, Moon } from '@element-plus/icons-vue'
-import { useColorMode } from '@vueuse/core'
-
-const { store, state } = useColorMode()
-const toggleTheme = () => {
-  store.value = store.value === 'dark' ? 'light' : 'dark'
-}
-</script>
+<script setup></script>
 
 <template>
-  <div>
-    <el-button
-      :icon="state === 'dark' ? Moon : Sunny"
-      @click="toggleTheme"
-      circle
-    />
-  </div>
+  <div></div>
 </template>
