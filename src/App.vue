@@ -1,3 +1,19 @@
-<script setup></script>
+<script setup>
+import { Sunny, Moon } from '@element-plus/icons-vue'
+import { useColorMode } from '@vueuse/core'
 
-<template>hello word</template>
+const { store, state } = useColorMode()
+const toggleTheme = () => {
+  store.value = store.value === 'dark' ? 'light' : 'dark'
+}
+</script>
+
+<template>
+  <div>
+    <el-button
+      :icon="state === 'dark' ? Moon : Sunny"
+      @click="toggleTheme"
+      circle
+    />
+  </div>
+</template>
