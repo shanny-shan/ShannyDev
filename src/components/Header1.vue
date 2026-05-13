@@ -16,7 +16,10 @@ const changeHeader = (e) => {
         v-bind:class="{ active: active === 0 }"
         @click="changeHeader(0)"
       >
-        <span><</span><span>&nbsp;关于我&nbsp;</span><span>/></span>
+        <span class="header_decor"><</span>
+        <span class="header_text">&nbsp;关于我&nbsp;</span>
+        <span class="header_sep">/&nbsp;</span>
+        <span class="header_decor">></span>
       </el-button>
       <el-button
         round
@@ -24,7 +27,10 @@ const changeHeader = (e) => {
         v-bind:class="{ active: active === 1 }"
         @click="changeHeader(1)"
       >
-        <span><</span><span>&nbsp;我的履历&nbsp;</span><span>/></span>
+        <span class="header_decor"><</span>
+        <span class="header_text">&nbsp;我的履历&nbsp;</span>
+        <span class="header_sep">/&nbsp;</span>
+        <span class="header_decor">></span>
       </el-button>
       <el-button
         round
@@ -32,7 +38,10 @@ const changeHeader = (e) => {
         v-bind:class="{ active: active === 2 }"
         @click="changeHeader(2)"
       >
-        <span><</span><span>&nbsp;我的项目&nbsp;</span><span>/></span>
+        <span class="header_decor"><</span>
+        <span class="header_text">&nbsp;我的项目&nbsp;</span>
+        <span class="header_sep">/&nbsp;</span>
+        <span class="header_decor">></span>
       </el-button>
       <el-button
         round
@@ -40,9 +49,12 @@ const changeHeader = (e) => {
         v-bind:class="{ active: active === 3 }"
         @click="changeHeader(3)"
       >
-        <span><</span><span>&nbsp;联系我&nbsp;</span><span>/></span>
+        <span class="header_decor"><</span>
+        <span class="header_text">&nbsp;联系我&nbsp;</span>
+        <span class="header_sep">/&nbsp;</span>
+        <span class="header_decor">></span>
       </el-button>
-      <Theme class="header-item" />
+      <Theme class="header-item header-theme" />
     </div>
   </el-affix>
 </template>
@@ -51,28 +63,52 @@ const changeHeader = (e) => {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 1rem;
+  background-color: var(--my-header_bg);
+  border-radius: 2rem;
+  height: 4rem;
+
   .header-item {
     margin: 0 1rem !important;
     background-color: transparent;
     border: none;
-    color: #4c6763;
     font-size: 1.1rem;
     height: 2.5rem;
+    // span {
+    //   color: #b6b5b5;
+    // }
   }
-  .header-item:hover {
-    border: none;
-    background-color: initial;
-    color: #4c6763;
-  }
-  .active {
-    border: none;
-    background-color: #f6f3ef;
-    color: #4c6763;
-  }
+
+  .header-item:hover,
+  .active,
   .active:hover {
     border: none;
-    background-color: #f6f3ef;
-    color: #4c6763;
+    font-weight: bold;
+  }
+  .active,
+  .header-item:hover {
+    // 下划线样式，待定
+    // text-decoration: underline dotted;
+    // text-decoration-color: #bb77ff;
+    // text-underline-offset: 0.4rem;
+    // text-decoration-thickness: 0.1rem;
+    background-color: var(--my-header_item_bg);
+    .header_decor {
+      color: var(--my-header_decor);
+    }
+    .header_text {
+      color: var(--my-header_text);
+    }
+    .header_sep {
+      color: var(--my-header_sep);
+    }
+  }
+  .header-theme {
+    color: var(--my-header_text);
+  }
+  .header-theme:hover {
+    color: var(--my-header_text);
+    background-color: initial;
   }
 }
 </style>

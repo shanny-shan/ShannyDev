@@ -4,6 +4,8 @@ import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
 import 'element-plus/theme-chalk/dark/css-vars.css'
 import '@/assets/css/style.scss'
+import '@/assets/css/light.scss'
+import '@/assets/css/dark.scss'
 import '@/assets/css/scrollbar.scss'
 
 const app = createApp(App)

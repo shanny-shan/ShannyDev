@@ -10,10 +10,10 @@ import Main from '@/components/Main.vue'
       <el-header class="header">
         <Header1 />
       </el-header>
-      <el-main>
+      <el-main class="main">
         <Main />
       </el-main>
-      <el-footer>
+      <el-footer class="footer">
         <Footer />
       </el-footer>
     </el-container>
@@ -25,5 +25,11 @@ import Main from '@/components/Main.vue'
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+.main {
+  height: 500px;
+}
+.footer {
+  height: 500px;
 }
 </style>
