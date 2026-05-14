@@ -26,10 +26,4 @@ import Main from '@/components/Main.vue'
   justify-content: center;
   align-items: center;
 }
-.main {
-  height: 500px;
-}
-.footer {
-  height: 500px;
-}
 </style>

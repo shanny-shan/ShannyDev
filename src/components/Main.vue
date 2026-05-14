@@ -1,6 +1,8 @@
-<script setup></script>
+<script setup>
+import About from './About.vue'
+</script>
 
 <template>
-  <div>Main</div>
+  <About />
 </template>
 <style scoped lang="scss"></style>

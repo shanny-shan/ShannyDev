@@ -63,20 +63,17 @@ const changeHeader = (e) => {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 1rem;
+  margin: 1vh 0;
   background-color: var(--my-header_bg);
-  border-radius: 2rem;
-  height: 4rem;
+  border-radius: 3vh;
+  height: 6vh;
 
   .header-item {
     margin: 0 1rem !important;
     background-color: transparent;
     border: none;
     font-size: 1.1rem;
-    height: 2.5rem;
-    // span {
-    //   color: #b6b5b5;
-    // }
+    height: 4vh;
   }
 
   .header-item:hover,
@@ -87,27 +84,22 @@ const changeHeader = (e) => {
   }
   .active,
   .header-item:hover {
-    // 下划线样式，待定
-    // text-decoration: underline dotted;
-    // text-decoration-color: #bb77ff;
-    // text-underline-offset: 0.4rem;
-    // text-decoration-thickness: 0.1rem;
     background-color: var(--my-header_item_bg);
     .header_decor {
-      color: var(--my-header_decor);
+      color: var(--my-text_pink);
     }
     .header_text {
       color: var(--my-header_text);
     }
     .header_sep {
-      color: var(--my-header_sep);
+      color: var(--my-text_pink);
     }
   }
   .header-theme {
-    color: var(--my-header_text);
+    color: var(--my-text_lightgreen);
   }
   .header-theme:hover {
-    color: var(--my-header_text);
+    color: var(--my-text_lightgreen);
     background-color: initial;
   }
 }
