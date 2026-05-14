@@ -111,6 +111,7 @@
       .contant {
         padding: 1rem;
         width: 33.33%;
+
         .contant_title {
           text-decoration: underline;
           text-decoration-color: var(--my-text_underline);
@@ -119,6 +120,8 @@
           font-size: 1.8rem;
         }
         .contant_msg {
+          margin-top: 1rem;
+
           .text_h3 {
             font-size: 0.8rem;
             color: var(--my-text_gray);
