@@ -1,5 +1,5 @@
 <script setup>
-import Header1 from '@/components/Header1.vue'
+import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
 import Main from '@/components/Main.vue'
 </script>
@@ -8,7 +8,7 @@ import Main from '@/components/Main.vue'
   <div class="common-layout">
     <el-container>
       <el-header class="header">
-        <Header1 />
+        <Header />
       </el-header>
       <el-main class="main">
         <Main />
