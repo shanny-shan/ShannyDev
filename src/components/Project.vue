@@ -41,7 +41,7 @@
     align-items: center;
     font-size: 5rem;
     font-weight: bold;
-    color: var(--my-ex_title);
+    color: var(--my-project_title);
   }
 
   .project_list {

@@ -15,10 +15,10 @@
     </div>
     <div class="about_expertise">
       <div class="ex_title">我的专长</div>
-      <div class="ex_contant">
-        <div class="contant">
-          <div class="contant_title">软件开发</div>
-          <div class="contant_msg">
+      <div class="ex_content">
+        <div class="content">
+          <div class="content_title">软件开发</div>
+          <div class="content_msg">
             <div class="text_h3">&lt;h3&gt;</div>
             <div class="msg">
               熟悉前后端协作开发，精通 JS/TS 基础语法，<br />
@@ -28,9 +28,9 @@
             <div class="text_h3">&lt;h3/&gt;</div>
           </div>
         </div>
-        <div class="contant">
-          <div class="contant_title">前端开发</div>
-          <div class="contant_msg">
+        <div class="content">
+          <div class="content_title">前端开发</div>
+          <div class="content_msg">
             <div class="text_h3">&lt;h3&gt;</div>
             <div class="msg">
               深耕 Vue2/Vue3 技术栈，熟练使用 Element Plus，<br />
@@ -40,9 +40,9 @@
             <div class="text_h3">&lt;h3/&gt;</div>
           </div>
         </div>
-        <div class="contant">
-          <div class="contant_title">网页实现</div>
-          <div class="contant_msg">
+        <div class="content">
+          <div class="content_title">网页实现</div>
+          <div class="content_msg">
             <div class="text_h3">&lt;h3&gt;</div>
             <div class="msg">
               熟练还原设计稿，精通 HTML/CSS 页面搭建，<br />
@@ -101,26 +101,26 @@
       font-weight: bold;
       color: var(--my-ex_title);
     }
-    .ex_contant {
+    .ex_content {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
-      border: 0.1rem solid var(--my-ex_contant_border);
+      border: 0.1rem solid var(--my-ex_content_border);
       margin-top: 5vh;
 
-      .contant {
+      .content {
         padding: 1rem;
         width: 33.33%;
 
-        .contant_title {
+        .content_title {
           text-decoration: underline;
           text-decoration-color: var(--my-ex_underline_1);
           text-underline-offset: -0.4rem;
           text-decoration-thickness: 0.6rem;
           font-size: 1.8rem;
         }
-        .contant_msg {
+        .content_msg {
           margin-top: 1rem;
 
           .text_h3 {
@@ -128,15 +128,15 @@
             color: var(--my-ex_text_h3);
           }
           .msg {
-            border-left: 0.05rem solid var(--my-ex_contant_msg_border);
+            border-left: 0.05rem solid var(--my-ex_content_msg_border);
             margin-left: 1rem;
             padding-left: 1rem;
             font-size: 0.9rem;
           }
         }
       }
-      .contant:not(:last-child) {
-        border-right: 0.1rem solid var(--my-ex_contant_border);
+      .content:not(:last-child) {
+        border-right: 0.1rem solid var(--my-ex_content_border);
       }
     }
   }
