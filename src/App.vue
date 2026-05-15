@@ -1,6 +1,5 @@
 <script setup>
 import Header from '@/components/Header.vue'
-import Footer from '@/components/Footer.vue'
 import Main from '@/components/Main.vue'
 </script>
 
@@ -13,9 +12,6 @@ import Main from '@/components/Main.vue'
       <el-main class="main">
         <Main />
       </el-main>
-      <el-footer class="footer">
-        <Footer />
-      </el-footer>
     </el-container>
   </div>
 </template>

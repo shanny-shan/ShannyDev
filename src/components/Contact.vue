@@ -35,11 +35,15 @@ const inputMessage = ref('')
         :clear-icon="CloseBold"
       />
     </div>
+    <div class="submit_button">
+      <el-button type="primary">提交</el-button>
+    </div>
   </div>
 </template>
 <style scoped lang="scss">
 .contact {
   margin-top: 10vh;
+  margin-bottom: 10vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -72,15 +76,28 @@ const inputMessage = ref('')
       height: 7vh;
       width: 45vw;
       font-size: 1rem;
-      --el-input-focus-border-color: #025a4e;
+      --el-input-focus-border-color: var(--my-input_focus_border);
     }
     .el-textarea {
       font-size: 1rem;
-      --el-input-focus-border-color: #025a4e;
+      --el-input-focus-border-color: var(--my-input_focus_border);
     }
     .input_email,
     .input_message {
       margin-top: 2vh;
+    }
+  }
+  .submit_button {
+    margin-top: 5vh;
+
+    .el-button {
+      width: 10vw;
+      height: 5vh;
+      font-size: 1rem;
+      --el-button-active-bg-color: var(--my-button_active_bg);
+      --el-button-active-border-color: var(--my-button_active_border);
+      --el-button-hover-border-color: var(--my-button_hover_bg);
+      --el-button-hover-bg-color: var(--my-button_hover_border);
     }
   }
 }
