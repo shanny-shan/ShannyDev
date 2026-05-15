@@ -54,7 +54,7 @@ const changeHeader = (e) => {
         <span class="header_sep">/&nbsp;</span>
         <span class="header_decor">></span>
       </el-button>
-      <Theme class="header-item header-theme" />
+      <Theme class="header-item header_theme" />
     </div>
   </el-affix>
 </template>
@@ -86,21 +86,21 @@ const changeHeader = (e) => {
   .header-item:hover {
     background-color: var(--my-header_item_bg);
     .header_decor {
-      color: var(--my-text_pink);
+      color: var(--my-header_decor);
     }
     .header_text {
       color: var(--my-header_text);
     }
     .header_sep {
-      color: var(--my-text_pink);
+      color: var(--my-header_sep);
     }
   }
-  .header-theme {
-    color: var(--my-text_lightgreen);
-  }
-  .header-theme:hover {
-    color: var(--my-text_lightgreen);
-    background-color: initial;
+  .header_theme {
+    color: var(--my-header_theme);
+    &:hover {
+      color: var(--my-header_theme_hover);
+      background-color: initial;
+    }
   }
 }
 </style>

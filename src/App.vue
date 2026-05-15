@@ -26,4 +26,7 @@ import Main from '@/components/Main.vue'
   justify-content: center;
   align-items: center;
 }
+.main {
+  overflow: visible;
+}
 </style>

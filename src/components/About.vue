@@ -71,7 +71,7 @@
     .about_name {
       font-size: 5rem;
       font-weight: bold;
-      color: var(--my-text_green);
+      color: var(--my-about_name);
       margin-bottom: 5vh;
     }
     .about_msg {
@@ -81,10 +81,11 @@
       align-items: center;
       font-size: 1.5rem;
       font-weight: bold;
-      color: var(--my-text_lightgreen);
+      color: var(--my-about_msg);
       margin-top: 5vh;
+
       .about_lan {
-        color: var(--my-text_black);
+        color: var(--my-about_lan);
       }
     }
   }
@@ -98,14 +99,14 @@
       align-items: center;
       font-size: 5rem;
       font-weight: bold;
-      color: var(--my-text_green);
+      color: var(--my-ex_title);
     }
     .ex_contant {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
-      border: 0.1rem solid var(--my-text_green);
+      border: 0.1rem solid var(--my-ex_contant_border);
       margin-top: 5vh;
 
       .contant {
@@ -114,7 +115,7 @@
 
         .contant_title {
           text-decoration: underline;
-          text-decoration-color: var(--my-text_underline);
+          text-decoration-color: var(--my-ex_underline_1);
           text-underline-offset: -0.4rem;
           text-decoration-thickness: 0.6rem;
           font-size: 1.8rem;
@@ -124,10 +125,10 @@
 
           .text_h3 {
             font-size: 0.8rem;
-            color: var(--my-text_gray);
+            color: var(--my-ex_text_h3);
           }
           .msg {
-            border-left: 0.05rem solid var(--my-text_gray);
+            border-left: 0.05rem solid var(--my-ex_contant_msg_border);
             margin-left: 1rem;
             padding-left: 1rem;
             font-size: 0.9rem;
@@ -135,7 +136,7 @@
         }
       }
       .contant:not(:last-child) {
-        border-right: 0.1rem solid var(--my-text_green);
+        border-right: 0.1rem solid var(--my-ex_contant_border);
       }
     }
   }
