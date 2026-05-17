@@ -7,8 +7,8 @@ import Contact from './Contact.vue'
 
 <template>
   <About />
-  <Resume />
-  <Project />
-  <Contact />
+  <Resume id="resume" />
+  <Project id="project" />
+  <Contact id="contact" />
 </template>
 <style scoped lang="scss"></style>

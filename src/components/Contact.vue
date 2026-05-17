@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue'
+import { CloseBold } from '@element-plus/icons-vue'
 
 const inputName = ref('')
 const inputEmail = ref('')

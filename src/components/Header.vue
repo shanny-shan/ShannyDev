@@ -1,9 +1,16 @@
 <script setup>
 import Theme from '@/components/Theme.vue'
 import { ref } from 'vue'
-const active = ref(0)
+
+import { useHeaderStore } from '@/stores'
+const headerStore = useHeaderStore()
+
 const changeHeader = (e) => {
-  active.value = e
+  headerStore.headerActive = e
+  const target = document.getElementById(headerStore.anchorList[e])
+  if (target) {
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
 }
 </script>
 
@@ -13,7 +20,7 @@ const changeHeader = (e) => {
       <el-button
         round
         class="header-item"
-        v-bind:class="{ active: active === 0 }"
+        v-bind:class="{ active: headerStore.headerActive === 0 }"
         @click="changeHeader(0)"
       >
         <span class="header_decor"><</span>
@@ -24,7 +31,7 @@ const changeHeader = (e) => {
       <el-button
         round
         class="header-item"
-        v-bind:class="{ active: active === 1 }"
+        v-bind:class="{ active: headerStore.headerActive === 1 }"
         @click="changeHeader(1)"
       >
         <span class="header_decor"><</span>
@@ -35,7 +42,7 @@ const changeHeader = (e) => {
       <el-button
         round
         class="header-item"
-        v-bind:class="{ active: active === 2 }"
+        v-bind:class="{ active: headerStore.headerActive === 2 }"
         @click="changeHeader(2)"
       >
         <span class="header_decor"><</span>
@@ -46,7 +53,7 @@ const changeHeader = (e) => {
       <el-button
         round
         class="header-item"
-        v-bind:class="{ active: active === 3 }"
+        v-bind:class="{ active: headerStore.headerActive === 3 }"
         @click="changeHeader(3)"
       >
         <span class="header_decor"><</span>
