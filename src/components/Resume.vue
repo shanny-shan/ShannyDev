@@ -1,12 +1,15 @@
 <script setup>
+import { useLanguageStore } from '@/stores'
 import { Plus } from '@element-plus/icons-vue'
 import { ref } from 'vue'
+
 const activeResume = ref('1')
+const languageStore = useLanguageStore()
 </script>
 
 <template>
   <div class="resume">
-    <div class="resume_title">我的履历</div>
+    <div class="resume_title">{{ languageStore.text.resumeTitle }}</div>
     <div class="collapse">
       <el-collapse v-model="activeResume" accordion>
         <el-collapse-item

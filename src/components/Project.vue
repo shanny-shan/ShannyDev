@@ -1,8 +1,11 @@
-<script setup></script>
+<script setup>
+import { useLanguageStore } from '@/stores'
+const languageStore = useLanguageStore()
+</script>
 
 <template>
   <div class="project">
-    <div class="project_title">我的项目</div>
+    <div class="project_title">{{ languageStore.text.projectTitle }}</div>
     <div class="project_list">
       <div class="project_item" v-for="i in 5" :key="i">
         <el-card style="max-width: 480px">

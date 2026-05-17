@@ -1,6 +1,9 @@
 <script setup>
 import { ref } from 'vue'
 import { CloseBold } from '@element-plus/icons-vue'
+import { useLanguageStore } from '@/stores'
+
+const languageStore = useLanguageStore()
 
 const inputName = ref('')
 const inputEmail = ref('')
@@ -9,20 +12,22 @@ const inputMessage = ref('')
 
 <template>
   <div class="contact">
-    <div class="contact_title">联系我</div>
-    <div class="contact_sub_title">有技术问题交流，或工作邀约？</div>
+    <div class="contact_title">{{ languageStore.text.contactTitle }}</div>
+    <div class="contact_sub_title">
+      {{ languageStore.text.contactSubTitle }}
+    </div>
     <div class="contact_content">
       <el-input
         class="input_name"
         v-model="inputName"
-        placeholder="请输入您的姓名"
+        :placeholder="languageStore.text.contactNamePlaceholder"
         clearable
         :clear-icon="CloseBold"
       />
       <el-input
         class="input_email"
         v-model="inputEmail"
-        placeholder="请输入您的邮箱"
+        :placeholder="languageStore.text.contactEmailPlaceholder"
         clearable
         :clear-icon="CloseBold"
       />
@@ -31,13 +36,13 @@ const inputMessage = ref('')
         v-model="inputMessage"
         :rows="5"
         type="textarea"
-        placeholder="请输入您的消息"
+        :placeholder="languageStore.text.contactMessagePlaceholder"
         clearable
         :clear-icon="CloseBold"
       />
     </div>
     <div class="submit_button">
-      <el-button type="primary">提交</el-button>
+      <el-button type="primary">{{ languageStore.text.submit }}</el-button>
     </div>
   </div>
 </template>

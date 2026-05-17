@@ -3,3 +3,4 @@ const pinia = createPinia()
 export default pinia
 
 export * from './modules/header'
+export * from './modules/language'

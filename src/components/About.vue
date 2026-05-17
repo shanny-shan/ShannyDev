@@ -1,23 +1,28 @@
-<script setup></script>
+<script setup>
+import { useLanguageStore } from '@/stores'
+const languageStore = useLanguageStore()
+</script>
 
 <template>
   <div class="about">
     <div class="about_top">
       <div class="about_name">
-        <div>您好，我是王珊珊</div>
-        <div>一名前端开发人员</div>
+        <div>{{ languageStore.text.aboutTitleOne }}</div>
+        <div>{{ languageStore.text.aboutTitleTwo }}</div>
       </div>
       <div class="about_msg">
-        专注
+        {{ languageStore.text.aboutContentOne }}
         <span class="about_lan">&nbsp;Vue、React&nbsp;</span>
-        等前端开发，热爱技术，持续精进。
+        {{ languageStore.text.aboutContentTwo }}
       </div>
     </div>
     <div class="about_expertise">
-      <div class="ex_title">我的专长</div>
+      <div class="ex_title">{{ languageStore.text.exTitle }}</div>
       <div class="ex_content">
         <div class="content">
-          <div class="content_title">软件开发</div>
+          <div class="content_title">
+            {{ languageStore.text.exContentTitleOne }}
+          </div>
           <div class="content_msg">
             <div class="text_h3">&lt;h3&gt;</div>
             <div class="msg">
@@ -29,7 +34,9 @@
           </div>
         </div>
         <div class="content">
-          <div class="content_title">前端开发</div>
+          <div class="content_title">
+            {{ languageStore.text.exContentTitleTwo }}
+          </div>
           <div class="content_msg">
             <div class="text_h3">&lt;h3&gt;</div>
             <div class="msg">
@@ -41,7 +48,9 @@
           </div>
         </div>
         <div class="content">
-          <div class="content_title">网页实现</div>
+          <div class="content_title">
+            {{ languageStore.text.exContentTitleThree }}
+          </div>
           <div class="content_msg">
             <div class="text_h3">&lt;h3&gt;</div>
             <div class="msg">
@@ -69,6 +78,10 @@
     align-items: center;
     height: 92vh;
     .about_name {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       font-size: 5rem;
       font-weight: bold;
       color: var(--my-about_name);
@@ -114,11 +127,20 @@
         width: 33.33%;
 
         .content_title {
-          text-decoration: underline;
-          text-decoration-color: var(--my-ex_underline_1);
-          text-underline-offset: -0.4rem;
-          text-decoration-thickness: 0.6rem;
           font-size: 1.8rem;
+          position: relative;
+          display: inline-block;
+
+          &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0.15rem;
+            width: 100%;
+            height: 0.6rem;
+            background-color: var(--my-ex_underline_1);
+            z-index: -1;
+          }
         }
         .content_msg {
           margin-top: 1rem;

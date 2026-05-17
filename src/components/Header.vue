@@ -2,8 +2,10 @@
 import Theme from '@/components/Theme.vue'
 import { ref } from 'vue'
 
-import { useHeaderStore } from '@/stores'
+import { useHeaderStore, useLanguageStore } from '@/stores'
+import Language from './Language.vue'
 const headerStore = useHeaderStore()
+const languageStore = useLanguageStore()
 
 const changeHeader = (e) => {
   headerStore.headerActive = e
@@ -24,7 +26,9 @@ const changeHeader = (e) => {
         @click="changeHeader(0)"
       >
         <span class="header_decor"><</span>
-        <span class="header_text">&nbsp;关于我&nbsp;</span>
+        <span class="header_text">
+          &nbsp;{{ languageStore.text.about }}&nbsp;
+        </span>
         <span class="header_sep">/&nbsp;</span>
         <span class="header_decor">></span>
       </el-button>
@@ -35,7 +39,9 @@ const changeHeader = (e) => {
         @click="changeHeader(1)"
       >
         <span class="header_decor"><</span>
-        <span class="header_text">&nbsp;我的履历&nbsp;</span>
+        <span class="header_text">
+          &nbsp;{{ languageStore.text.resume }}&nbsp;
+        </span>
         <span class="header_sep">/&nbsp;</span>
         <span class="header_decor">></span>
       </el-button>
@@ -46,7 +52,9 @@ const changeHeader = (e) => {
         @click="changeHeader(2)"
       >
         <span class="header_decor"><</span>
-        <span class="header_text">&nbsp;我的项目&nbsp;</span>
+        <span class="header_text">
+          &nbsp;{{ languageStore.text.project }}&nbsp;
+        </span>
         <span class="header_sep">/&nbsp;</span>
         <span class="header_decor">></span>
       </el-button>
@@ -57,11 +65,14 @@ const changeHeader = (e) => {
         @click="changeHeader(3)"
       >
         <span class="header_decor"><</span>
-        <span class="header_text">&nbsp;联系我&nbsp;</span>
+        <span class="header_text">
+          &nbsp;{{ languageStore.text.contact }}&nbsp;
+        </span>
         <span class="header_sep">/&nbsp;</span>
         <span class="header_decor">></span>
       </el-button>
       <Theme class="header-item header_theme" />
+      <Language class="header-item header_language" />
     </div>
   </el-affix>
 </template>
