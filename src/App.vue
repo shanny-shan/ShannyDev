@@ -1,8 +1,11 @@
 <script setup>
 import { onMounted, onUnmounted } from 'vue'
 
-import Header from '@/components/Header.vue'
-import Main from '@/components/Main.vue'
+import Header from '@/components/Header/Header.vue'
+import About from '@/components/About.vue'
+import Resume from '@/components/Resume.vue'
+import Project from '@/components/Project.vue'
+import Contact from '@/components/Contact.vue'
 
 import { useHeaderStore } from '@/stores'
 const headerStore = useHeaderStore()
@@ -49,7 +52,10 @@ onUnmounted(() => {
         <Header />
       </el-header>
       <el-main class="main">
-        <Main />
+        <About />
+        <Resume id="resume" />
+        <Project id="project" />
+        <Contact id="contact" />
       </el-main>
     </el-container>
   </div>
@@ -60,6 +66,13 @@ onUnmounted(() => {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  padding: 0;
+  --el-header-height: 6vh;
+
+  > div {
+    width: 100% !important;
+  }
 }
 .main {
   overflow: visible;

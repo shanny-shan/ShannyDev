@@ -48,7 +48,6 @@ const inputMessage = ref('')
 </template>
 <style scoped lang="scss">
 .contact {
-  margin-top: 10vh;
   margin-bottom: 10vh;
   display: flex;
   flex-direction: column;
@@ -62,6 +61,7 @@ const inputMessage = ref('')
     font-size: 5rem;
     font-weight: bold;
     color: var(--my-contact_title);
+    margin-top: 10vh;
   }
   .contact_sub_title {
     display: flex;

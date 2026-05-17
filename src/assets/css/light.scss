@@ -1,45 +1,57 @@
+@keyframes gridScroll {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 -4rem;
+  }
+}
 :root {
   html,
   body {
-    background-color: #ede7de;
+    background-color: #ffc900;
+    background-image:
+      linear-gradient(#e8e8e8 0.1rem, transparent 1px),
+      linear-gradient(90deg, #e8e8e8 0.1rem, transparent 1px);
+    background-size: 4rem 4rem;
+    animation: gridScroll 3s linear infinite;
   }
+  --my-black: #000000;
+  --my-pink: #dd5257;
+  --my-white: #ffffff;
 
-  --el-color-primary: #025a4e;
-  --my-button_hover_bg: #4c6763;
-  --my-button_hover_border: #4c6763;
-  --my-button_active_bg: #025a4e;
-  --my-button_active_border: #025a4e;
-  --my-input_focus_border: #025a4e;
+  --my-btn_primay_bg: var(--my-pink);
+  --my-btn_primary_border: var(--my-black);
+  --my-btn_primary_text: var(--my-black);
+  --my-btn_primary_hover_bg: var(--my-black);
 
-  --my-header_bg: #f4f1eb;
-  --my-header_item_bg: #faf8f6;
-  --my-header_text: #025a4e;
-  --my-header_decor: #d094e5;
-  --my-header_sep: #d094e5;
-  --my-header_theme: #4c6763;
-  --my-header_theme_hover: #4c6763;
+  --my-header_bg: var(--my-pink);
+  --my-header_border_bottom: var(--my-black);
+  --my-header_text: var(--my-black);
+  --my-header_text_hover: var(--my-white);
+  --my-header_left_text: var(--my-black);
 
-  --my-about_name: #025a4e;
+  --my-about_name: var(--my-pink);
   --my-about_msg: #4c6763;
-  --my-about_lan: #000000;
+  --my-about_lan: var(--my-black);
 
-  --my-ex_title: #025a4e;
-  --my-ex_content_border: #025a4e;
+  --my-ex_title: var(--my-pink);
+  --my-ex_content_border: var(--my-pink);
   --my-ex_text_h3: #7c7c7c;
   --my-ex_underline_1: #df058d;
   --my-ex_content_msg_border: #7c7c7c;
 
-  --my-resume_title: #025a4e;
+  --my-resume_title: var(--my-pink);
   --my-collapse_color: #ffffff;
-  --my-collapse_bg: #025a4e;
+  --my-collapse_bg: var(--my-pink);
   --my-collapse_wrap_bg: #4c6763;
-  --my-collapse_border: #025a4e;
+  --my-collapse_border: var(--my-pink);
 
-  --my-project_title: #025a4e;
+  --my-project_title: var(--my-pink);
   --my-card_title: #ffffff;
   --my-card_msg: #ffffff;
-  --my-card_back: #025a4e;
+  --my-card_back: var(--my-pink);
 
-  --my-contact_title: #025a4e;
+  --my-contact_title: var(--my-pink);
   --my-contact_sub_title: #4c6763;
 }

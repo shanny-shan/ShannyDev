@@ -36,7 +36,6 @@ const languageStore = useLanguageStore()
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 10vh;
 
   .project_title {
     display: flex;
@@ -45,6 +44,7 @@ const languageStore = useLanguageStore()
     font-size: 5rem;
     font-weight: bold;
     color: var(--my-project_title);
+    margin-top: 10vh;
   }
 
   .project_list {

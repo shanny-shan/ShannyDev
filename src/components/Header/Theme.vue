@@ -9,9 +9,9 @@ const toggleTheme = () => {
 </script>
 
 <template>
-  <el-button
+  <el-link
     :icon="state === 'dark' ? Moon : Sunny"
     @click="toggleTheme"
-    circle
+    :underline="false"
   />
 </template>

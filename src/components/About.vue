@@ -77,6 +77,7 @@ const languageStore = useLanguageStore()
     justify-content: center;
     align-items: center;
     height: 92vh;
+
     .about_name {
       display: flex;
       flex-direction: column;
@@ -85,7 +86,6 @@ const languageStore = useLanguageStore()
       font-size: 5rem;
       font-weight: bold;
       color: var(--my-about_name);
-      margin-bottom: 5vh;
     }
     .about_msg {
       display: flex;
