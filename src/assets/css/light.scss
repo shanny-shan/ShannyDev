@@ -7,18 +7,16 @@
   }
 }
 :root {
-  html,
-  body {
-    background-color: #ffc900;
-    background-image:
-      linear-gradient(#e8e8e8 0.1rem, transparent 1px),
-      linear-gradient(90deg, #e8e8e8 0.1rem, transparent 1px);
-    background-size: 4rem 4rem;
-    animation: gridScroll 3s linear infinite;
-  }
   --my-black: #000000;
   --my-pink: #dd5257;
   --my-white: #ffffff;
+  --my-yellow: #ffc900;
+  --my-dark-yellow: #ffc100;
+
+  --my-body_back: var(--my-yellow);
+  --my-grid_line: var(--my-dark-yellow);
+  --my-select_back: var(--my-black);
+  --my-select_text: var(--my-yellow);
 
   --my-btn_primay_bg: var(--my-pink);
   --my-btn_primary_border: var(--my-black);
@@ -32,8 +30,9 @@
   --my-header_left_text: var(--my-black);
 
   --my-about_name: var(--my-pink);
-  --my-about_msg: #4c6763;
-  --my-about_lan: var(--my-black);
+  --my-about_msg_back: var(--my-black);
+  --my-about_msg: var(--my-yellow);
+  --my-about_lan: var(--my-pink);
 
   --my-ex_title: var(--my-pink);
   --my-ex_content_border: var(--my-pink);

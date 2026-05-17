@@ -23,7 +23,11 @@ const changeHeader = (e) => {
           @click="changeHeader(0)"
           :underline="false"
         >
-          <span class="header_left_text">[ www.shanny.wang ]</span>
+          <span class="header_left_text">
+            <span class="bracket left">[&nbsp;</span>
+            <span class="print_text">www.shanny.wang</span>
+            <span class="bracket right">&nbsp;]</span>
+          </span>
         </el-link>
       </div>
       <div class="header_center">
@@ -34,7 +38,11 @@ const changeHeader = (e) => {
           @click="changeHeader(0)"
           :underline="false"
         >
-          <span class="header_text">[ {{ languageStore.text.about }} ]</span>
+          <span class="header_text">
+            <span class="bracket left">[&nbsp;</span>
+            <span class="print_text">{{ languageStore.text.about }}</span>
+            <span class="bracket right">&nbsp;]</span>
+          </span>
         </el-link>
 
         <el-link
@@ -45,7 +53,11 @@ const changeHeader = (e) => {
           @click="changeHeader(1)"
           :underline="false"
         >
-          <span class="header_text">[ {{ languageStore.text.resume }} ]</span>
+          <span class="header_text">
+            <span class="bracket left">[&nbsp;</span>
+            <span class="print_text">{{ languageStore.text.resume }}</span>
+            <span class="bracket right">&nbsp;]</span>
+          </span>
         </el-link>
 
         <el-link
@@ -56,7 +68,11 @@ const changeHeader = (e) => {
           @click="changeHeader(2)"
           :underline="false"
         >
-          <span class="header_text">[ {{ languageStore.text.project }} ]</span>
+          <span class="header_text">
+            <span class="bracket left">[&nbsp;</span>
+            <span class="print_text">{{ languageStore.text.project }}</span>
+            <span class="bracket right">&nbsp;]</span>
+          </span>
         </el-link>
 
         <el-link
@@ -67,7 +83,11 @@ const changeHeader = (e) => {
           @click="changeHeader(3)"
           :underline="false"
         >
-          <span class="header_text">[ {{ languageStore.text.contact }} ]</span>
+          <span class="header_text">
+            <span class="bracket left">[&nbsp;</span>
+            <span class="print_text">{{ languageStore.text.contact }}</span>
+            <span class="bracket right">&nbsp;]</span>
+          </span>
         </el-link>
       </div>
       <div class="header_right">
@@ -93,13 +113,6 @@ const changeHeader = (e) => {
     color: var(--my-header_text);
   }
 
-  .header-item:hover,
-  .active,
-  .active:hover {
-    border: none;
-    font-weight: bold;
-  }
-
   .active,
   .header_text:hover {
     color: var(--my-header_text_hover);
@@ -115,6 +128,38 @@ const changeHeader = (e) => {
     .header_language {
       color: var(--my-header_text);
     }
+  }
+
+  // hover动态样式
+  .bracket {
+    transition: all 0.3s ease;
+    display: inline-block;
+  }
+  .header-item:hover .bracket.left {
+    transform: translateX(-0.5rem);
+  }
+  .header-item:hover .bracket.right {
+    transform: translateX(0.5rem);
+  }
+
+  // hover打字机动态样式
+  @keyframes printText {
+    0% {
+      clip-path: inset(0 100% 0 0);
+    }
+    100% {
+      clip-path: inset(0 0 0 0);
+    }
+  }
+  .print_text {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .header-item:hover .print_text {
+    animation: printText 1s steps(20) forwards;
   }
 }
 </style>

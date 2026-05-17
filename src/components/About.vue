@@ -93,12 +93,14 @@ const languageStore = useLanguageStore()
       justify-content: center;
       align-items: center;
       font-size: 1.5rem;
-      font-weight: bold;
+      background-color: var(--my-about_msg_back);
       color: var(--my-about_msg);
+      padding: 0.2rem 1rem;
       margin-top: 5vh;
 
       .about_lan {
         color: var(--my-about_lan);
+        font-weight: bold;
       }
     }
   }
