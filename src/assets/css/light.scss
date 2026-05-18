@@ -1,56 +1,70 @@
-@keyframes gridScroll {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: 0 -4rem;
-  }
-}
 :root {
   --my-black: #000000;
-  --my-pink: #dd5257;
+  --my-pink-1: #dd5257;
+  --my-pink-2: #fac6f7;
   --my-white: #ffffff;
   --my-yellow: #ffc900;
-  --my-dark-yellow: #ffc100;
+  --my-dark-yellow-1: #ffc100;
+  --my-green: #90ffa8;
+  --my-blue: #90a8ed;
 
   --my-body_back: var(--my-yellow);
-  --my-grid_line: var(--my-dark-yellow);
+  --my-grid_line: var(--my-dark-yellow-1);
   --my-select_back: var(--my-black);
   --my-select_text: var(--my-yellow);
 
-  --my-btn_primay_bg: var(--my-pink);
-  --my-btn_primary_border: var(--my-black);
-  --my-btn_primary_text: var(--my-black);
-  --my-btn_primary_hover_bg: var(--my-black);
-
-  --my-header_bg: var(--my-pink);
+  --my-header_bg: var(--my-pink-1);
   --my-header_border_bottom: var(--my-black);
   --my-header_text: var(--my-black);
   --my-header_text_hover: var(--my-white);
   --my-header_left_text: var(--my-black);
 
-  --my-about_name: var(--my-pink);
+  --my-about_name: var(--my-pink-1);
+  --my-about_name_shadow: var(--my-black);
   --my-about_msg_back: var(--my-black);
+  --my-about_msg_shadow: var(--my-pink-1);
   --my-about_msg: var(--my-yellow);
-  --my-about_lan: var(--my-pink);
+  --my-about_lan: var(--my-pink-1);
 
-  --my-ex_title: var(--my-pink);
-  --my-ex_content_border: var(--my-pink);
-  --my-ex_text_h3: #7c7c7c;
-  --my-ex_underline_1: #df058d;
-  --my-ex_content_msg_border: #7c7c7c;
+  --my-ex_title: var(--my-pink-1);
+  --my-ex_title_shadow: var(--my-black);
+  --my-ex_content_border: var(--my-black);
+  --my-ex_content_header: var(--my-white);
+  --my-ex_content_header_back: var(--my-black);
+  --my-ex_content_list_back: var(--my-white);
+  --my-ex_text_h3: var(--my-blue);
+  --my-ex_underline_1: var(--my-pink-1);
+  --my-ex_underline_2: var(--my-yellow);
+  --my-ex_underline_3: var(--my-blue);
+  --my-ex_content_msg_border: var(--my-blue);
 
-  --my-resume_title: var(--my-pink);
-  --my-collapse_color: #ffffff;
-  --my-collapse_bg: var(--my-pink);
-  --my-collapse_wrap_bg: #4c6763;
-  --my-collapse_border: var(--my-pink);
+  --my-resume_title: var(--my-pink-1);
+  --my-resume_title_shadow: var(--my-black);
+  --my-collapse_color: var(--my-yellow);
+  --my-collapse_bg: var(--my-black);
+  --my-collapse_shadow: var(--my-pink-1);
+  --my-collapse_wrap_bg: var(--my-white);
+  --my-collapse_border: var(--my-pink-2);
+  --my-collapse_content: var(--my-pink-1);
 
-  --my-project_title: var(--my-pink);
-  --my-card_title: #ffffff;
-  --my-card_msg: #ffffff;
-  --my-card_back: var(--my-pink);
+  --my-project_title: var(--my-pink-1);
+  --my-project_title_shadow: var(--my-black);
+  --my-card_title: var(--my-yellow);
+  --my-card_msg: var(--my-yellow);
+  --my-card_back: var(--my-black);
+  --my-card_shadow: var(--my-pink-1);
 
-  --my-contact_title: var(--my-pink);
-  --my-contact_sub_title: #4c6763;
+  --my-contact_title: var(--my-pink-1);
+  --my-contact_title_shadow: var(--my-black);
+  --my-contact_sub_title: var(--my-yellow);
+  --my-form_shadow: var(--my-pink-1);
+
+  --my-btn_primary_text: var(--my-yellow);
+  --my-btn_primay_bg: var(--my-black);
+  --my-btn_primary_shadow: var(--my-pink-1);
+  --my-btn_primary_border: var(--my-black);
+  --my-btn_primary_hover_text: var(--my-black);
+  --my-btn_primary_hover_bg: var(--my-pink-1);
+  --my-btn_primary_hover_shadow: var(--my-black);
+  --my-btn_primary_hover_border: var(--my-pink-1);
 }

@@ -45,6 +45,7 @@ const languageStore = useLanguageStore()
     font-weight: bold;
     color: var(--my-project_title);
     margin-top: 10vh;
+    text-shadow: 0.3rem 0.3rem 0 var(--my-project_title_shadow);
   }
 
   .project_list {
@@ -59,17 +60,18 @@ const languageStore = useLanguageStore()
     .project_item {
       width: calc((100% - 3rem) / 3);
       padding: 0.5rem;
+
       .el-card {
-        border-radius: 1.5rem;
         --el-card-padding: 0;
         background-color: var(--my-card_back);
-        img {
-          border-radius: 1.5rem;
-        }
+        box-shadow: 0.5rem 0.5rem 0 var(--my-card_shadow);
+        border: none;
+
         .card_content {
           padding: 1rem;
+
           .card_title {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             font-weight: bold;
             color: var(--my-card_title);
           }

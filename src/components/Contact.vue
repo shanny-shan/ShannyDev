@@ -62,14 +62,18 @@ const inputMessage = ref('')
     font-weight: bold;
     color: var(--my-contact_title);
     margin-top: 10vh;
+    text-shadow: 0.3rem 0.3rem 0 var(--my-cntact_title_shadow);
   }
   .contact_sub_title {
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.2rem;
+    background-color: var(--my-about_msg_back);
     color: var(--my-contact_sub_title);
-    margin-top: 1vh;
+    padding: 0.2rem 1rem;
+    margin-top: 5vh;
+    box-shadow: 0.3rem 0.3rem 0 var(--my-about_msg_shadow);
   }
   .contact_content {
     display: flex;
@@ -83,10 +87,12 @@ const inputMessage = ref('')
       width: 45vw;
       font-size: 1rem;
       --el-input-focus-border-color: var(--my-input_focus_border);
+      box-shadow: 0.5rem 0.5rem 0 var(--my-form_shadow);
     }
     .el-textarea {
       font-size: 1rem;
       --el-input-focus-border-color: var(--my-input_focus_border);
+      box-shadow: 0.5rem 0.5rem 0 var(--my-form_shadow);
     }
     .input_email,
     .input_message {
@@ -97,13 +103,19 @@ const inputMessage = ref('')
     margin-top: 5vh;
 
     .el-button {
-      width: 10vw;
-      height: 5vh;
-      font-size: 1rem;
-      --el-button-active-bg-color: var(--my-button_active_bg);
-      --el-button-active-border-color: var(--my-button_active_border);
-      --el-button-hover-border-color: var(--my-button_hover_bg);
-      --el-button-hover-bg-color: var(--my-button_hover_border);
+      width: 8vw;
+      height: 6vh;
+      font-size: 1.2rem;
+      background-color: var(--my-btn_primay_bg);
+      border-color: var(--my-btn_primary_border);
+      color: var(--my-btn_primary_text);
+      box-shadow: 0.25rem 0.25rem 0 var(--my-btn_primary_shadow);
+    }
+    .el-button:hover {
+      background-color: var(--my-btn_primary_hover_bg);
+      border-color: var(--my-btn_primary_hover_border);
+      color: var(--my-btn_primary_hover_text);
+      box-shadow: 0.25rem 0.25rem 0 var(--my-btn_primary_hover_shadow);
     }
   }
 }

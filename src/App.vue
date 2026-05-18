@@ -46,7 +46,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="common-layout" id="about">
+  <div class="common-layout">
     <el-container>
       <el-header class="header">
         <Header />

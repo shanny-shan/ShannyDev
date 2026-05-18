@@ -1,45 +1,79 @@
-html,
-body {
-  font-size: 16px;
-  margin: 0;
-  background-color: var(--my-body_back);
-  background-image:
-    linear-gradient(var(--my-grid_line) 0.1rem, transparent 0.1rem),
-    linear-gradient(90deg, var(--my-grid_line) 0.1rem, transparent 0.1rem);
-  background-size: 4rem 4rem;
-  animation: gridScroll 1s linear infinite;
+@font-face {
+  font-family: 'PixFont';
+  src: url('@/assets/fonts/ZLabsRoundPix.ttf') format('truetype');
+}
 
-  ::selection {
-    background-color: var(--my-select_back);
-    color: var(--my-select_text);
+@keyframes gridScroll {
+  from {
+    background-position: 0 0;
   }
-
-  .main {
-    padding: 0;
+  to {
+    background-position: 0 -4rem;
   }
+}
 
-  .el-collapse {
-    .el-collapse-item:not(:first-child) {
-      margin-top: 1vh;
+* {
+  font-family: 'PixFont', sans-serif;
+
+  html,
+  body {
+    font-size: 16px;
+    margin: 0;
+    background-color: var(--my-body_back);
+    background-image:
+      linear-gradient(var(--my-grid_line) 0.1rem, transparent 0.1rem),
+      linear-gradient(90deg, var(--my-grid_line) 0.1rem, transparent 0.1rem);
+    background-size: 4rem 4rem;
+    animation: gridScroll 1s linear infinite;
+
+    ::selection {
+      background-color: var(--my-select_back);
+      color: var(--my-select_text);
     }
-    .el-collapse-item {
-      .el-collapse-item__header {
-        padding: 0.2rem 1rem;
-        background-color: var(--my-collapse_bg);
-        border-bottom: 1px solid var(--my-collapse_border);
-        border-radius: 0.5vh;
-        color: var(--my-collapse_color);
+
+    .main {
+      padding: 0;
+    }
+
+    .el-input,
+    .el-textarea {
+      .el-input__wrapper,
+      .el-textarea__inner {
+        background-color: var(--my-black) !important;
       }
+      .el-input__inner,
+      .el-textarea__inner {
+        color: var(--my-yellow);
+      }
+    }
 
-      .el-collapse-item__wrap {
-        padding: 0.2rem 1rem;
-        background-color: var(--my-collapse_wrap_bg);
-        border-bottom: 1px solid var(--my-collapse_border);
-        border-radius: 0.5vh;
-        margin: 2vh 0;
+    .el-collapse {
+      border: none;
 
-        .el-collapse-item__content {
+      .el-collapse-item:not(:first-child) {
+        margin-top: 2vh;
+      }
+      .el-collapse-item {
+        .el-collapse-item__header {
+          padding: 0.2rem 1rem;
+          background-color: var(--my-collapse_bg);
+          border-bottom: 1px solid var(--my-collapse_border);
+          border-radius: 0.5vh;
           color: var(--my-collapse_color);
+          box-shadow: 0.5rem 0.5rem 0 var(--my-collapse_shadow);
+        }
+
+        .el-collapse-item__wrap {
+          padding: 0.2rem 1rem;
+          background-color: var(--my-collapse_wrap_bg);
+          border-bottom: 1px solid var(--my-collapse_border);
+          border-radius: 0.5vh;
+          margin: 4vh 0;
+
+          .el-collapse-item__content {
+            color: var(--my-collapse_color);
+            padding: 1rem 0;
+          }
         }
       }
     }
