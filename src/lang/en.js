@@ -32,7 +32,8 @@ export default {
     'Took part in developing off-campus practice management system in professional training. Responsible for front-end development, realized information entry, approval process and data query functions. Cooperated with team to finish project development and debugging, accumulated practical development experience.',
 
   projectTitle: 'Project',
-  projectImgSrc: '/src/assets/images/project-2.png',
+  projectImgSrc: `
+https://shanny-dev.oss-cn-hongkong.aliyuncs.com/images/project_2_EN.png?Expires=1779109724&OSSAccessKeyId=TMP.3KvCSpNoXZMEjtaRfkuzBoxjUrXdyLsw3bnEJSqaCVM7qfh8w6dnjNZRxxD52dhcXqfDtAnTr68CHp4h5C9AuFTf4JJZso&Signature=Yknfu%2B8qOP0z5JNqjiUp%2F0QFwho%3D`,
   projectContentTitle: 'Personal Portfolio Website',
   projectContentMsg:
     'This is my personal frontend portfolio that displays practical projects and records technical experience.',
