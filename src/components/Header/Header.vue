@@ -21,7 +21,7 @@ const changeHeader = (e) => {
           href="/"
           class="header-item"
           @click="changeHeader(0)"
-          :underline="false"
+          underline="never"
         >
           <span class="header_left_text">
             <span class="bracket left">[&nbsp;</span>
@@ -36,7 +36,7 @@ const changeHeader = (e) => {
           class="header-item"
           :class="{ active: headerStore.headerActive === 0 }"
           @click="changeHeader(0)"
-          :underline="false"
+          underline="never"
         >
           <span class="header_text">
             <span class="bracket left">[&nbsp;</span>
@@ -51,7 +51,7 @@ const changeHeader = (e) => {
           class="header-item"
           :class="{ active: headerStore.headerActive === 1 }"
           @click="changeHeader(1)"
-          :underline="false"
+          underline="never"
         >
           <span class="header_text">
             <span class="bracket left">[&nbsp;</span>
@@ -66,7 +66,7 @@ const changeHeader = (e) => {
           class="header-item"
           :class="{ active: headerStore.headerActive === 2 }"
           @click="changeHeader(2)"
-          :underline="false"
+          underline="never"
         >
           <span class="header_text">
             <span class="bracket left">[&nbsp;</span>
@@ -81,7 +81,7 @@ const changeHeader = (e) => {
           class="header-item"
           :class="{ active: headerStore.headerActive === 3 }"
           @click="changeHeader(3)"
-          :underline="false"
+          underline="never"
         >
           <span class="header_text">
             <span class="bracket left">[&nbsp;</span>

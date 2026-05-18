@@ -153,11 +153,13 @@ const languageStore = useLanguageStore()
         width: 100%;
 
         .content {
+          box-sizing: border-box;
           padding: 1rem;
           width: 33.33%;
+          height: 45vh;
 
           .content_title {
-            font-size: 1.8rem;
+            font-size: 4vh;
             position: relative;
             display: inline-block;
             z-index: 0;
@@ -166,9 +168,9 @@ const languageStore = useLanguageStore()
               content: '';
               position: absolute;
               left: 0;
-              bottom: 0.15rem;
+              bottom: 0.15vh;
               width: 100%;
-              height: 0.6rem;
+              height: 1.2vh;
               z-index: -1;
             }
           }
@@ -188,18 +190,28 @@ const languageStore = useLanguageStore()
             }
           }
           .content_msg {
-            margin-top: 1rem;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 1rem 0;
+            height: 83%;
 
             .text_h3 {
-              font-size: 1.2rem;
+              font-size: 2.5vh;
               color: var(--my-ex_text_h3);
+              height: 15%;
             }
             .msg {
+              display: flex;
+              justify-content: start;
+              align-items: center;
               border-left: 0.05rem solid var(--my-ex_content_msg_border);
               margin-left: 1.1vw;
               padding: 1rem 0 1rem 1rem;
-              font-size: 1.2rem;
-              line-height: 1.8rem;
+              font-size: 3vh;
+              line-height: 4vh;
+              height: 90%;
             }
           }
         }

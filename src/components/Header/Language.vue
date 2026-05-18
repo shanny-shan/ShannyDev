@@ -7,7 +7,7 @@ const langStore = useLanguageStore()
 <template>
   <el-link
     @click="langStore.toggleLang()"
-    :underline="false"
+    underline="never"
     class="header_right_text"
   >
     <span class="bracket left">[&nbsp;</span>

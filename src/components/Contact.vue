@@ -62,7 +62,7 @@ const inputMessage = ref('')
     font-weight: bold;
     color: var(--my-contact_title);
     margin-top: 10vh;
-    text-shadow: 0.3rem 0.3rem 0 var(--my-cntact_title_shadow);
+    text-shadow: 0.3rem 0.3rem 0 var(--my-contact_title_shadow);
   }
   .contact_sub_title {
     display: flex;

@@ -1,27 +1,23 @@
 <script setup>
 import { useLanguageStore } from '@/stores'
 const languageStore = useLanguageStore()
+
+const clickProject = () => {}
 </script>
 
 <template>
   <div class="project">
     <div class="project_title">{{ languageStore.text.projectTitle }}</div>
     <div class="project_list">
-      <div class="project_item" v-for="i in 5" :key="i">
-        <el-card style="max-width: 480px">
-          <img
-            src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png"
-            style="width: 100%"
-          />
+      <div class="project_item" v-for="i in 1" :key="i">
+        <el-card @click="clickProject()">
+          <img :src="languageStore.text.projectImgSrc" />
           <div class="card_content">
             <div class="card_title">
-              Building Kalo's Foundation: A Design System for Growth and
-              Inclusion
+              {{ languageStore.text.projectContentTitle }}
             </div>
             <div class="card_msg">
-              I led the creation of a new design system to address usability,
-              accessibility, and engineering roadblocks, driving client
-              conversion and attracting key users.
+              {{ languageStore.text.projectContentMsg }}
             </div>
           </div>
         </el-card>
@@ -62,13 +58,22 @@ const languageStore = useLanguageStore()
       padding: 0.5rem;
 
       .el-card {
-        --el-card-padding: 0;
+        cursor: pointer;
         background-color: var(--my-card_back);
-        box-shadow: 0.5rem 0.5rem 0 var(--my-card_shadow);
+        box-shadow: 1rem 1rem 0 var(--my-card_shadow);
         border: none;
+        border-right: 0.1rem solid var(--my-card_border);
+        border-bottom: 0.1rem solid var(--my-card_border);
+        border-radius: 0;
+
+        img {
+          width: 100%;
+          border-radius: 0;
+          border: 0.1rem solid var(--my-card_border);
+        }
 
         .card_content {
-          padding: 1rem;
+          padding: 1rem 0.5rem 0 0.5rem;
 
           .card_title {
             font-size: 1.2rem;
@@ -79,6 +84,7 @@ const languageStore = useLanguageStore()
             font-size: 1rem;
             color: var(--my-card_msg);
             margin-top: 1vh;
+            line-height: 1.6rem;
           }
         }
       }

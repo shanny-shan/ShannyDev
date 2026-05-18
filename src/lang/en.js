@@ -22,8 +22,20 @@ export default {
     'Capable of accurate design restoration, proficient in layout adaptation, animation implementation, browser compatibility and frontend performance optimization.',
 
   resumeTitle: 'Resume',
+  resumeTitleLeftOne: 'ZASOFT Technology Co., Ltd',
+  resumeTitleLeftTwo: 'Jilin Animation Institute',
+  resumeTitleRightOne: 'Frontend Development Engineer',
+  resumeTitleRightTwo: 'Software Engineering',
+  resumeContentOne:
+    '1. Develop front-end projects and implement business functions with Vue3; \n 2. Connect back-end APIs, encapsulate interfaces and realize business logic; \n 3. Reuse public components and standardize codes to improve efficiency;\n 4. Restore UI designs and complete responsive layout and multi-terminal adaptation;\n 5. Fix online bugs, optimize performance and solve compatibility issues; \n 6. Participate in requirement review and iteration, assist in project launch and maintenance.',
+  resumeContentTwo:
+    'Took part in developing off-campus practice management system in professional training. Responsible for front-end development, realized information entry, approval process and data query functions. Cooperated with team to finish project development and debugging, accumulated practical development experience.',
 
   projectTitle: 'Project',
+  projectImgSrc: '/src/assets/images/project-2.png',
+  projectContentTitle: 'Personal Portfolio Website',
+  projectContentMsg:
+    'This is my personal frontend portfolio that displays practical projects and records technical experience.',
 
   contactTitle: 'Contact',
   contactSubTitle: 'Looking for technical exchanges or job offers?',

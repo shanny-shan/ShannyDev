@@ -21,8 +21,20 @@ export default {
     '熟练还原设计稿，精通 HTML/CSS 页面搭建，掌握响应式布局、多端适配与动画效果，熟悉浏览器兼容处理与前端性能优化。',
 
   resumeTitle: '我的履历',
+  resumeTitleLeftOne: '天津市大光软件科技有限公司',
+  resumeTitleLeftTwo: '吉林动画学院',
+  resumeTitleRightOne: '前端开发工程师',
+  resumeTitleRightTwo: '软件工程专业',
+  resumeContentOne:
+    '1. 负责公司项目前端开发，基于 Vue3 完成页面搭建与业务功能开发；\n 2. 对接后端接口，完成数据联调、接口封装与业务逻辑实现；\n 3. 封装通用组件与公共方法，统一代码规范，提升开发效率；\n 4. 精准还原 UI 设计稿，实现响应式布局、交互动效与多端适配；\n 5. 排查修复线上 BUG，进行页面性能优化与浏览器兼容处理；\n 6. 参与需求评审、版本迭代，配合团队完成项目上线与日常维护。',
+  resumeContentTwo:
+    '参与软件工程专业实训项目 —— 外出实践管理系统，主要负责前端开发工作，搭建系统业务页面，实现实践信息录入、流程审批、数据查询等基础功能，协同团队完成项目开发、调试与落地，积累团队协作与项目实战经验。',
 
   projectTitle: '我的项目',
+  projectImgSrc: '/src/assets/images/project-1.png',
+  projectContentTitle: '个人作品集网站',
+  projectContentMsg:
+    '这里是我的个人前端作品集，收录项目开发案例，记录技术成长与实战经验。',
 
   contactTitle: '联系我',
   contactSubTitle: '有技术问题交流，或工作邀约？',

@@ -12,6 +12,6 @@ const toggleTheme = () => {
   <el-link
     :icon="state === 'dark' ? Moon : Sunny"
     @click="toggleTheme"
-    :underline="false"
+    underline="never"
   />
 </template>
