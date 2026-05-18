@@ -31,7 +31,7 @@ export default {
     '参与软件工程专业实训项目 —— 外出实践管理系统，主要负责前端开发工作，搭建系统业务页面，实现实践信息录入、流程审批、数据查询等基础功能，协同团队完成项目开发、调试与落地，积累团队协作与项目实战经验。',
 
   projectTitle: '我的项目',
-  projectImgSrc: `https://shanny-dev.oss-cn-hongkong.aliyuncs.com/images/project_1_CN.png?Expires=1779109669&OSSAccessKeyId=TMP.3KvCSpNoXZMEjtaRfkuzBoxjUrXdyLsw3bnEJSqaCVM7qfh8w6dnjNZRxxD52dhcXqfDtAnTr68CHp4h5C9AuFTf4JJZso&Signature=yp5pY75YBoTTnUIyO26PNRxIsJU%3D`,
+  projectImgSrc: `https://beijing-files.oss-cn-beijing.aliyuncs.com/shanny-dev/images/project_1_CN.png?Expires=1779110228&OSSAccessKeyId=TMP.3KvCSpNoXZMEjtaRfkuzBoxjUrXdyLsw3bnEJSqaCVM7qfh8w6dnjNZRxxD52dhcXqfDtAnTr68CHp4h5C9AuFTf4JJZso&Signature=AcPsSWo3VmE%2BbTO9zp%2FGpaYJTjE%3D`,
   projectContentTitle: '个人作品集网站',
   projectContentMsg:
     '这里是我的个人前端作品集，收录项目开发案例，记录技术成长与实战经验。',
