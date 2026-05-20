@@ -1,7 +1,7 @@
 {
   "name": "shannydev",
   "private": true,
-  "version": "1.1.0+vue",
+  "version": "1.1.1+vue",
   "type": "module",
   "scripts": {
     "dev": "vite",
