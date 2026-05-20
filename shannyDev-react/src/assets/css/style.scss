@@ -1,0 +1,66 @@
+@font-face {
+  font-family: 'PixFont';
+  src: url('@/assets/fonts/ZLabsRoundPix.ttf') format('truetype');
+}
+
+@keyframes gridScroll {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 -4rem;
+  }
+}
+
+* {
+  font-family: 'PixFont', sans-serif;
+
+  html,
+  body {
+    font-size: 16px;
+    margin: 0;
+    background-color: var(--my-body_back);
+    background-image:
+      linear-gradient(var(--my-grid_line) 0.1rem, transparent 0.1rem),
+      linear-gradient(90deg, var(--my-grid_line) 0.1rem, transparent 0.1rem);
+    background-size: 4rem 4rem;
+    animation: gridScroll 1s linear infinite;
+
+    ::selection {
+      background-color: var(--my-select_back);
+      color: var(--my-select_text);
+    }
+
+    .main {
+      padding: 0;
+    }
+
+    .ant-collapse {
+      border: none;
+
+      .ant-collapse-item:not(:first-child) {
+        margin-top: 2vh;
+      }
+
+      .ant-collapse-item {
+        .ant-collapse-header {
+          padding: 0.5rem 1rem;
+          background-color: var(--my-collapse_bg);
+          border-bottom: 1px solid var(--my-collapse_border);
+          border-radius: 0.5vh !important;
+          color: var(--my-collapse_color) !important;
+          box-shadow: 0.5rem 0.5rem 0 var(--my-collapse_shadow);
+        }
+
+        .ant-collapse-body {
+          padding: 1rem !important;
+          background-color: var(--my-collapse_wrap_bg);
+          border-bottom: 0.1rem solid var(--my-collapse_border);
+          border-radius: 0.5vh;
+          margin: 4vh 0;
+          color: var(--my-collapse_color);
+        }
+      }
+    }
+  }
+}

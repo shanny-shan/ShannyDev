@@ -1,0 +1,34 @@
+.common-layout {
+  width: 100%;
+  height: 100vh;
+}
+
+.ant-layout {
+  height: 100%;
+  background-color: var(--my-body_bg) !important;
+}
+:where(.css-dev-only-do-not-override-ypkju9).ant-layout,
+:where(.css-dev-only-do-not-override-ypkju9).ant-layout * {
+  box-sizing: content-box !important;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+  height: 6vh;
+  line-height: 6vh;
+  background: transparent !important;
+}
+
+.header > div {
+  width: 100% !important;
+}
+
+.main {
+  overflow: visible;
+  padding: 0;
+}

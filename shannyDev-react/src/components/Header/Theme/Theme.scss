@@ -1,0 +1,13 @@
+.header_theme {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  color: var(--my-header_text);
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: var(--my-header_text_hover);
+  }
+}

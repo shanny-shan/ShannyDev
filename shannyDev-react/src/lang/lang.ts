@@ -1,0 +1,35 @@
+export interface LanguageText {
+  about: string
+  resume: string
+  project: string
+  contact: string
+  aboutTitleOne: string
+  aboutTitleTwo: string
+  aboutContentOne: string
+  aboutContentTwo: string
+  exTitle: string
+  exContentHeader: string
+  exContentTitleOne: string
+  exContentTitleTwo: string
+  exContentTitleThree: string
+  exContentMsgOne: string
+  exContentMsgTwo: string
+  exContentMsgThree: string
+  resumeTitle: string
+  resumeTitleLeftOne: string
+  resumeTitleLeftTwo: string
+  resumeTitleRightOne: string
+  resumeTitleRightTwo: string
+  resumeContentOne: string
+  resumeContentTwo: string
+  projectTitle: string
+  projectImgSrc: string
+  projectContentTitle: string
+  projectContentMsg: string
+  contactTitle: string
+  contactSubTitle: string
+  contactNamePlaceholder: string
+  contactEmailPlaceholder: string
+  contactMessagePlaceholder: string
+  submit: string
+}

@@ -1,0 +1,95 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .contact_title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+    font-weight: bold;
+    color: var(--my-contact_title);
+    margin-top: 10vh;
+    text-shadow: 0.3rem 0.3rem 0 var(--my-contact_title_shadow);
+  }
+  .contact_sub_title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    background-color: var(--my-about_msg_back);
+    color: var(--my-contact_sub_title);
+    padding: 0.2rem 1rem;
+    margin-top: 5vh;
+    box-shadow: 0.3rem 0.3rem 0 var(--my-about_msg_shadow);
+  }
+  .contact_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5vh;
+
+    .ant-input-affix-wrapper:not(.ant-input-textarea-affix-wrapper) {
+      background-color: var(--my-form_bg) !important;
+      color: var(--my-form_text) !important;
+      height: 7vh;
+      width: 45vw;
+      font-size: 1rem;
+      box-shadow: 0.5rem 0.5rem 0 var(--my-form_shadow);
+
+      ::placeholder {
+        color: var(--my-form_text) !important;
+      }
+    }
+
+    .ant-input-outlined:hover {
+      border-color: #fff;
+    }
+    .ant-input-textarea-affix-wrapper,
+    textarea {
+      background-color: var(--my-form_bg) !important;
+      color: var(--my-form_text) !important;
+      font-size: 1rem;
+      box-shadow: 0.5rem 0.5rem 0 var(--my-form_shadow);
+      border-radius: 0.5rem;
+
+      ::placeholder {
+        color: var(--my-form_text) !important;
+      }
+    }
+
+    .input_email,
+    .input_message {
+      margin-top: 2vh;
+    }
+    .ant-input-suffix {
+      svg {
+        color: var(--my-form_text);
+      }
+    }
+  }
+  .submit_button {
+    margin-top: 5vh;
+
+    .ant-btn {
+      width: 8vw;
+      height: 6vh;
+      font-size: 1.2rem;
+      background-color: var(--my-btn_primay_bg);
+      border-color: var(--my-btn_primary_border);
+      color: var(--my-btn_primary_text);
+      box-shadow: 0.25rem 0.25rem 0 var(--my-btn_primary_shadow);
+      border-radius: 0;
+      margin-bottom: 10vh !important;
+    }
+    .ant-btn:hover {
+      background-color: var(--my-btn_primary_hover_bg);
+      border-color: var(--my-btn_primary_hover_border);
+      color: var(--my-btn_primary_hover_text);
+      box-shadow: 0.25rem 0.25rem 0 var(--my-btn_primary_hover_shadow);
+    }
+  }
+}
