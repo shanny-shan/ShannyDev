@@ -19,7 +19,7 @@ const Header = () => {
       <div className="header-group">
         <div className="header_left">
           <Link
-            href="/"
+            href="/react"
             className="header-item"
             onClick={() => changeHeader(0)}
             underline={false}
