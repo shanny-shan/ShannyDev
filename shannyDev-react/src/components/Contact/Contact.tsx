@@ -1,7 +1,8 @@
 import { useState } from 'react'
-import { Input, Button } from 'antd'
+import { Input, Button, message } from 'antd'
 import { CloseOutlined } from '@ant-design/icons'
 import { useLanguageStore } from '@/stores'
+import emailjs from '@emailjs/browser'
 import './Contact.scss'
 
 const { TextArea } = Input
@@ -16,6 +17,38 @@ const Contact = ({ id }: ContactProps) => {
   const [inputName, setInputName] = useState('')
   const [inputEmail, setInputEmail] = useState('')
   const [inputMessage, setInputMessage] = useState('')
+  const [loading, setLoading] = useState(false)
+
+  const handleSubmit = async () => {
+    if (!inputName || !inputEmail || !inputMessage) {
+      message.warning(text.formRequired)
+      return
+    }
+    setLoading(true)
+    try {
+      const templateParams = {
+        name: inputName,
+        email: inputEmail,
+        message: inputMessage,
+        reply_to: inputEmail,
+      }
+      await emailjs.send(
+        'service_8dudqbm',
+        'template_xb7nvew',
+        templateParams,
+        'XGFbMQhsBdx6cR_vA',
+      )
+      message.success(text.sendSuccess)
+      setInputName('')
+      setInputEmail('')
+      setInputMessage('')
+    } catch (err) {
+      message.error(text.sendFailed)
+      console.log(err)
+    } finally {
+      setLoading(false)
+    }
+  }
 
   return (
     <div className="contact" id={id}>
@@ -46,7 +79,9 @@ const Contact = ({ id }: ContactProps) => {
         />
       </div>
       <div className="submit_button">
-        <Button type="primary">{text.submit}</Button>
+        <Button type="primary" loading={loading} onClick={handleSubmit}>
+          {text.submit}
+        </Button>
       </div>
     </div>
   )

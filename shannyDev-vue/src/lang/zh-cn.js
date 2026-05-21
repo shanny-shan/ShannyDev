@@ -42,5 +42,8 @@ export default {
   contactEmailPlaceholder: '请输入您的邮箱',
   contactMessagePlaceholder: '请输入您的留言',
 
+  formRequired: '请填写完整信息',
+  sendSuccess: '留言发送成功',
+  sendFailed: '发送失败',
   submit: '提交',
 }

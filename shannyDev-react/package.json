@@ -2,7 +2,7 @@
   "homepage": "/react/",
   "name": "shannydev-react",
   "private": true,
-  "version": "1.1.1+react",
+  "version": "1.1.2+react",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -11,6 +11,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "antd": "^6.4.3",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",

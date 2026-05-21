@@ -31,5 +31,8 @@ export interface LanguageText {
   contactNamePlaceholder: string
   contactEmailPlaceholder: string
   contactMessagePlaceholder: string
+  formRequired?: string
+  sendSuccess?: string
+  sendFailed?: string
   submit: string
 }

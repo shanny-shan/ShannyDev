@@ -2,12 +2,46 @@
 import { ref } from 'vue'
 import { CloseBold } from '@element-plus/icons-vue'
 import { useLanguageStore } from '@/stores'
+import { ElMessage } from 'element-plus'
+import emailjs from '@emailjs/browser'
 
 const languageStore = useLanguageStore()
 
 const inputName = ref('')
 const inputEmail = ref('')
 const inputMessage = ref('')
+const loading = ref(false)
+
+const handleSubmit = async () => {
+  if (!inputName.value || !inputEmail.value || !inputMessage.value) {
+    ElMessage.warning(languageStore.text.formRequired)
+    return
+  }
+  loading.value = true
+  try {
+    const templateParams = {
+      name: inputName.value,
+      email: inputEmail.value,
+      message: inputMessage.value,
+      reply_to: inputEmail.value,
+    }
+    await emailjs.send(
+      'service_8dudqbm',
+      'template_xb7nvew',
+      templateParams,
+      'XGFbMQhsBdx6cR_vA',
+    )
+    ElMessage.success(languageStore.text.sendSuccess)
+    inputName.value = ''
+    inputEmail.value = ''
+    inputMessage.value = ''
+  } catch (err) {
+    ElMessage.error(languageStore.text.sendFailed)
+    console.log(err)
+  } finally {
+    loading.value = false
+  }
+}
 </script>
 
 <template>
@@ -42,10 +76,13 @@ const inputMessage = ref('')
       />
     </div>
     <div class="submit_button">
-      <el-button type="primary">{{ languageStore.text.submit }}</el-button>
+      <el-button type="primary" @click="handleSubmit" :loading="loading">
+        {{ languageStore.text.submit }}
+      </el-button>
     </div>
   </div>
 </template>
+
 <style scoped lang="scss">
 .contact {
   margin-bottom: 10vh;

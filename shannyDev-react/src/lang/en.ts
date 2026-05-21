@@ -38,5 +38,9 @@ export default {
   contactNamePlaceholder: 'Please enter your name',
   contactEmailPlaceholder: 'Please enter your email',
   contactMessagePlaceholder: 'Please enter your message',
+
+  formRequired: 'Please fill in all information',
+  sendSuccess: 'Message sent successfully',
+  sendFailed: 'Failed to send',
   submit: 'Submit',
 }
