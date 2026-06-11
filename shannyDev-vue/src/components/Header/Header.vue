@@ -18,7 +18,7 @@ const changeHeader = (e) => {
     <div class="header-group">
       <div class="header_left">
         <el-link
-          href="/"
+          href="https://www.shanny.wang"
           class="header-item"
           @click="changeHeader(0)"
           underline="never"
@@ -92,6 +92,18 @@ const changeHeader = (e) => {
       </div>
       <div class="header_right">
         <!-- <Theme class="header-item header_theme" /> -->
+        <el-link
+          class="header-item"
+          href="https://www.shanny.wang/react"
+          target="_blank"
+          underline="never"
+        >
+          <span class="header_left_text">
+            <span class="bracket left">[&nbsp;</span>
+            <span class="print_text">To React</span>
+            <span class="bracket right">&nbsp;]</span>
+          </span>
+        </el-link>
         <Language class="header-item header_language" />
       </div>
     </div>

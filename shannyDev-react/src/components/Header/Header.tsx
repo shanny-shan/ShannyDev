@@ -19,14 +19,14 @@ const Header = () => {
       <div className="header-group">
         <div className="header_left">
           <Link
-            href="/react"
+            href="https://www.shanny.wang/react"
             className="header-item"
             onClick={() => changeHeader(0)}
             underline={false}
           >
             <span className="header_left_text">
               <span className="bracket left">[&nbsp;</span>
-              <span className="print_text">www.shanny.wang</span>
+              <span className="print_text">www.shanny.wang / react</span>
               <span className="bracket right">&nbsp;]</span>
             </span>
           </Link>
@@ -87,6 +87,18 @@ const Header = () => {
         </div>
 
         <div className="header_right">
+          <Link
+            href="https://www.shanny.wang"
+            target="_blank"
+            className="header-item"
+            underline={false}
+          >
+            <span className="header_left_text">
+              <span className="bracket left">[&nbsp;</span>
+              <span className="print_text">To Vue</span>
+              <span className="bracket right">&nbsp;]</span>
+            </span>
+          </Link>
           <Language className="header-item header_language" />
         </div>
       </div>

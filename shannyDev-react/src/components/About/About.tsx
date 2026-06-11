@@ -12,8 +12,12 @@ const About = () => {
         </div>
         <div className="about_msg">
           {text.aboutContentOne}
-          <span className="about_lan">&nbsp;Vue、React&nbsp;</span>
+          <span className="about_lan">&nbsp;Vue3&nbsp;</span>
           {text.aboutContentTwo}
+          {text.aboutContentThree}
+          <span className="about_lan">&nbsp;.NET、Java&nbsp;</span>
+          {text.aboutContentFour}
+          {text.aboutContentFive}
         </div>
       </div>
 

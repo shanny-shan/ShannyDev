@@ -7,6 +7,9 @@ export interface LanguageText {
   aboutTitleTwo: string
   aboutContentOne: string
   aboutContentTwo: string
+  aboutContentThree: string
+  aboutContentFour: string
+  aboutContentFive: string
   exTitle: string
   exContentHeader: string
   exContentTitleOne: string

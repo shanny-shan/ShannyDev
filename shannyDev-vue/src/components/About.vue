@@ -12,8 +12,12 @@ const languageStore = useLanguageStore()
       </div>
       <div class="about_msg">
         {{ languageStore.text.aboutContentOne }}
-        <span class="about_lan">&nbsp;Vue、React&nbsp;</span>
+        <span class="about_lan">&nbsp;Vue3&nbsp;</span>
         {{ languageStore.text.aboutContentTwo }}
+        {{ languageStore.text.aboutContentThree }}
+        <span class="about_lan">&nbsp;.NET、Java&nbsp;</span>
+        {{ languageStore.text.aboutContentFour }}
+        {{ languageStore.text.aboutContentFive }}
       </div>
     </div>
     <div class="about_expertise" id="about">

@@ -25,13 +25,20 @@
     margin-top: 5vh;
 
     .project_item {
-      width: calc((100% - 3rem) / 3);
-      padding: 0.5rem;
+      width: calc(100% / 3);
+      padding: 1rem;
+      box-sizing: border-box !important;
 
+      .card_blue {
+        background-color: var(--my-card_blue_back);
+        box-shadow: 1rem 1rem 0 var(--my-card_blue_shadow);
+      }
+      .card_pink {
+        background-color: var(--my-card_pink_back);
+        box-shadow: 1rem 1rem 0 var(--my-card_pink_shadow);
+      }
       .ant-card {
         cursor: pointer;
-        background-color: var(--my-card_back);
-        box-shadow: 1rem 1rem 0 var(--my-card_shadow);
         border: none;
         border-right: 0.1rem solid var(--my-card_border);
         border-bottom: 0.1rem solid var(--my-card_border);
@@ -39,6 +46,7 @@
 
         img {
           width: 100%;
+          height: 25vh;
           border-radius: 0;
           border: 0.1rem solid var(--my-card_border);
         }

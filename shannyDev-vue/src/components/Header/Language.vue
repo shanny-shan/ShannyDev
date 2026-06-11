@@ -1,6 +1,5 @@
 <script setup>
 import { useLanguageStore } from '@/stores'
-
 const langStore = useLanguageStore()
 </script>
 
@@ -18,7 +17,6 @@ const langStore = useLanguageStore()
   </el-link>
 </template>
 <style lang="scss" scoped>
-// hover动态样式
 .bracket {
   transition: all 0.3s ease;
   display: inline-block;
