@@ -1,0 +1,16 @@
+.header-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--my-header_bg);
+  border-bottom: 0.1rem solid var(--my-header_border_bottom);
+  width: 100vw;
+  height: 6vh;
+}
+
+.header_left,
+.header_center,
+.header_right {
+  display: flex;
+  align-items: center;
+}

@@ -1,4 +1,5 @@
 <script setup>
+import Title from '@/components/Title.vue'
 import { ref } from 'vue'
 import { CloseBold } from '@element-plus/icons-vue'
 import { useLanguageStore } from '@/stores'
@@ -46,7 +47,7 @@ const handleSubmit = async () => {
 
 <template>
   <div class="contact">
-    <div class="contact_title">{{ languageStore.text.contactTitle }}</div>
+    <Title :title="languageStore.text.contactTitle" />
     <div class="contact_sub_title">
       {{ languageStore.text.contactSubTitle }}
     </div>
@@ -91,16 +92,6 @@ const handleSubmit = async () => {
   justify-content: center;
   align-items: center;
 
-  .contact_title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 5rem;
-    font-weight: bold;
-    color: var(--my-contact_title);
-    margin-top: 10vh;
-    text-shadow: 0.3rem 0.3rem 0 var(--my-contact_title_shadow);
-  }
   .contact_sub_title {
     display: flex;
     justify-content: center;

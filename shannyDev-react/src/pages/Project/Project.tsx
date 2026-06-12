@@ -1,3 +1,4 @@
+import Title from '@/components/Title/Title'
 import defaultImage from '@/assets/images/loading.jpg'
 import { useRef } from 'react'
 import { useLanguageStore } from '@/stores'
@@ -62,7 +63,7 @@ const Project = ({ id }: ProjectProps) => {
 
   return (
     <div className="project" id={id}>
-      <div className="project_title">{text.projectTitle}</div>
+      <Title title={text.projectTitle} />
       <div className="project_list">
         {projectList.current.map((item) => (
           <div className="project_item" key={item.id}>

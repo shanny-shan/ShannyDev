@@ -1,3 +1,4 @@
+import Title from '@/components/Title/Title'
 import { useState } from 'react'
 import { Collapse } from 'antd'
 import { PlusOutlined } from '@ant-design/icons'
@@ -37,7 +38,7 @@ const Resume = ({ id }: ResumeProps) => {
 
   return (
     <div className="resume" id={id}>
-      <div className="resume_title">{text.resumeTitle}</div>
+      <Title title={text.resumeTitle} />
       <div className="collapse">
         <Collapse
           activeKey={activeKey}

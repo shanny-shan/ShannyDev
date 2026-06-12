@@ -1,4 +1,5 @@
 <script setup>
+import Title from '@/components/Title.vue'
 import { ref } from 'vue'
 import defaultImage from '@/assets/images/loading.jpg'
 import { useLanguageStore } from '@/stores'
@@ -55,7 +56,7 @@ const handleError = (e) => {
 
 <template>
   <div class="project">
-    <div class="project_title">{{ languageStore.text.projectTitle }}</div>
+    <Title :title="languageStore.text.projectTitle" />
     <div class="project_list">
       <div class="project_item" v-for="item in projectList" :key="item.id">
         <el-card :class="'card_' + item.color" @click="clickProject(item.href)">
@@ -84,17 +85,6 @@ const handleError = (e) => {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  .project_title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 5rem;
-    font-weight: bold;
-    color: var(--my-project_title);
-    margin-top: 10vh;
-    text-shadow: 0.3rem 0.3rem 0 var(--my-project_title_shadow);
-  }
 
   .project_list {
     display: flex;

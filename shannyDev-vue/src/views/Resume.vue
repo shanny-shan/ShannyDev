@@ -1,4 +1,5 @@
 <script setup>
+import Title from '@/components/Title.vue'
 import { useLanguageStore } from '@/stores'
 import { Plus } from '@element-plus/icons-vue'
 import { ref } from 'vue'
@@ -9,7 +10,7 @@ const languageStore = useLanguageStore()
 
 <template>
   <div class="resume">
-    <div class="resume_title">{{ languageStore.text.resumeTitle }}</div>
+    <Title :title="languageStore.text.resumeTitle" />
     <div class="collapse">
       <el-collapse v-model="activeResume" accordion>
         <el-collapse-item name="1" :icon="Plus">
@@ -50,16 +51,6 @@ const languageStore = useLanguageStore()
   justify-content: center;
   align-items: center;
 
-  .resume_title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 5rem;
-    font-weight: bold;
-    color: var(--my-resume_title);
-    margin-top: 10vh;
-    text-shadow: 0.3rem 0.3rem 0 var(--my-resume_title_shadow);
-  }
   .collapse {
     width: 60vw;
     margin-top: 5vh;

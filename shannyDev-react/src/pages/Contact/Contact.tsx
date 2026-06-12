@@ -1,3 +1,4 @@
+import Title from '@/components/Title/Title'
 import { useState } from 'react'
 import { Input, Button, message } from 'antd'
 import { CloseOutlined } from '@ant-design/icons'
@@ -52,7 +53,7 @@ const Contact = ({ id }: ContactProps) => {
 
   return (
     <div className="contact" id={id}>
-      <div className="contact_title">{text.contactTitle}</div>
+      <Title title={text.contactTitle} />
       <div className="contact_sub_title">{text.contactSubTitle}</div>
       <div className="contact_content">
         <Input

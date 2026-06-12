@@ -1,15 +1,14 @@
 <script setup>
 import { onMounted, onUnmounted } from 'vue'
 
-import Header from '@/components/Header/Header.vue'
-import About from '@/components/About.vue'
-import Resume from '@/components/Resume.vue'
-import Project from '@/components/Project.vue'
-import Contact from '@/components/Contact.vue'
+import Header from '@/views/Header.vue'
+import About from '@/views/About.vue'
+import Resume from '@/views/Resume.vue'
+import Project from '@/views/Project.vue'
+import Contact from '@/views/Contact.vue'
 
 import { useHeaderStore } from '@/stores'
 const headerStore = useHeaderStore()
-
 const handleScroll = () => {
   const scrollTop = window.scrollY
   const clientHeight = document.documentElement.clientHeight

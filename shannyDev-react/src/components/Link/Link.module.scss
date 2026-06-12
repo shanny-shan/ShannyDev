@@ -1,0 +1,44 @@
+.header-item {
+  font-size: 1.1rem;
+  padding: 0 1.5rem !important;
+  color: var(--my-header_text) !important;
+}
+
+.active,
+.header_text:hover {
+  color: var(--my-header_text_hover) !important;
+}
+.header_left_text,
+.isIcon:hover {
+  color: var(--my-header_left_text) !important;
+}
+
+.bracket {
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+.header-item:hover .bracket.left {
+  transform: translateX(-0.5rem);
+}
+.header-item:hover .bracket.right {
+  transform: translateX(0.5rem);
+}
+
+@keyframes printText {
+  0% {
+    clip-path: inset(0 100% 0 0);
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+  }
+}
+.print_text {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.header-item:hover .print_text {
+  animation: printText 1s steps(20) forwards;
+}

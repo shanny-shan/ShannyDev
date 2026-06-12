@@ -1,5 +1,6 @@
 <script setup>
 import { useLanguageStore } from '@/stores'
+import Title from '@/components/Title.vue'
 const languageStore = useLanguageStore()
 </script>
 
@@ -21,10 +22,7 @@ const languageStore = useLanguageStore()
       </div>
     </div>
     <div class="about_expertise" id="about">
-      <div class="ex_title">
-        {{ languageStore.text.exTitle }}
-      </div>
-
+      <Title :title="languageStore.text.exTitle" />
       <div class="ex_content">
         <div class="content_header">
           {{ languageStore.text.exContentHeader }}
@@ -116,17 +114,6 @@ const languageStore = useLanguageStore()
 
   .about_expertise {
     width: 80vw;
-
-    .ex_title {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 5rem;
-      font-weight: bold;
-      color: var(--my-ex_title);
-      margin-top: 10vh;
-      text-shadow: 0.3rem 0.3rem 0 var(--my-ex_title_shadow);
-    }
 
     .ex_content {
       display: flex;

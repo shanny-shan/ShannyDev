@@ -1,3 +1,4 @@
+import Title from '@/components/Title/Title'
 import { useLanguageStore } from '@/stores'
 import './About.scss'
 const About = () => {
@@ -22,12 +23,11 @@ const About = () => {
       </div>
 
       <div className="about_expertise" id="about">
-        <div className="ex_title">{text.exTitle}</div>
+        <Title title={text.exTitle} />
 
         <div className="ex_content">
           <div className="content_header">{text.exContentHeader}</div>
           <div className="content_list">
-            {/* 第一项 */}
             <div className="content">
               <div className="content_title one">{text.exContentTitleOne}</div>
               <div className="content_msg">
@@ -37,7 +37,6 @@ const About = () => {
               </div>
             </div>
 
-            {/* 第二项 */}
             <div className="content">
               <div className="content_title two">{text.exContentTitleTwo}</div>
               <div className="content_msg">
@@ -47,7 +46,6 @@ const About = () => {
               </div>
             </div>
 
-            {/* 第三项 */}
             <div className="content">
               <div className="content_title three">
                 {text.exContentTitleThree}
