@@ -70,12 +70,12 @@ const toggleTheme = () => {
           position="right"
           :clickFunction="languageStore.toggleLang"
         />
-        <Link
+        <!-- <Link
           :isIcon="true"
           :icon="state === 'dark' ? Moon : Sunny"
           position="right"
           :clickFunction="toggleTheme"
-        />
+        /> -->
       </div>
     </div>
   </el-affix>

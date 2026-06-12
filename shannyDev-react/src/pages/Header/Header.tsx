@@ -1,7 +1,7 @@
 import { Affix } from 'antd'
 import LinkComponent from '@/components/Link/Link'
 import { useHeaderStore, useLanguageStore } from '@/stores'
-import { SunOutlined, MoonOutlined } from '@ant-design/icons'
+// import { SunOutlined, MoonOutlined } from '@ant-design/icons'
 import { useState, useEffect } from 'react'
 import styles from './Header.module.scss'
 
@@ -22,9 +22,9 @@ const Header = () => {
 
   const [theme, setTheme] = useState<'dark' | 'light'>(getInitialTheme)
 
-  const toggleTheme = () => {
-    setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'))
-  }
+  // const toggleTheme = () => {
+  //   setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'))
+  // }
 
   useEffect(() => {
     const root = document.documentElement
