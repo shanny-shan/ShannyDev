@@ -1,5 +1,5 @@
 import Title from '@/components/Title/Title'
-import defaultImage from '@/assets/images/loading.jpg'
+import defaultImage from '@/assets/images/loading.gif'
 import { useRef } from 'react'
 import { useLanguageStore } from '@/stores'
 import { Card } from 'antd'

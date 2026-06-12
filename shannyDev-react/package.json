@@ -2,7 +2,7 @@
   "homepage": "/react/",
   "name": "shannydev-react",
   "private": true,
-  "version": "1.1.4+react",
+  "version": "1.1.5+react",
   "type": "module",
   "scripts": {
     "dev": "vite",

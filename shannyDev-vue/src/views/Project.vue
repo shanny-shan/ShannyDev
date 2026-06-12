@@ -1,7 +1,7 @@
 <script setup>
 import Title from '@/components/Title.vue'
 import { ref } from 'vue'
-import defaultImage from '@/assets/images/loading.jpg'
+import defaultImage from '@/assets/images/loading.gif'
 import { useLanguageStore } from '@/stores'
 const languageStore = useLanguageStore()
 
@@ -119,9 +119,11 @@ const handleError = (e) => {
 
         img {
           width: 100%;
-          height: 25vh;
+          height: 21.5vh;
+          object-fit: contain;
           border-radius: 0;
           border: 0.1rem solid var(--my-card_border);
+          background-color: var(--my-card_img_back);
         }
 
         .card_content {
