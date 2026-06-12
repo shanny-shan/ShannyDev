@@ -1,7 +1,11 @@
+header {
+  overflow-x: hidden;
+}
 .header-group {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   background-color: var(--my-header_bg);
   border-bottom: 0.1rem solid var(--my-header_border_bottom);
   width: 100vw;
