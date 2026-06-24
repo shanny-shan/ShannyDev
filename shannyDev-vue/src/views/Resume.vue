@@ -54,6 +54,11 @@ const languageStore = useLanguageStore()
   .collapse {
     width: 60vw;
     margin-top: 5vh;
+
+    @media (max-width: 415px) {
+      width: 95vw;
+    }
+
     .collapse_title {
       display: flex;
       flex-direction: row;
@@ -62,6 +67,13 @@ const languageStore = useLanguageStore()
       padding-right: 1rem;
       font-weight: bold;
       font-size: 1.1rem;
+
+      @media (max-width: 415px) {
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        font-size: 1rem;
+      }
     }
     .collapse_content {
       color: var(--my-collapse_content);

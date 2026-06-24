@@ -19,9 +19,16 @@
       font-size: 5rem;
       color: var(--my-about_name);
       text-shadow: 0.25rem 0.25rem 0 var(--my-about_name_shadow);
+
+      @media (max-width: 415px) {
+        width: 95vw;
+        font-size: 2.5rem !important;
+        text-shadow: 0.15rem 0.15rem 0 var(--my-about_name_shadow);
+      }
     }
 
     .about_msg {
+      box-sizing: border-box;
       display: flex;
       flex-direction: row;
       justify-content: center;
@@ -33,6 +40,15 @@
       margin-top: 5vh;
       box-shadow: 0.3rem 0.3rem 0 var(--my-about_msg_shadow);
 
+      @media (max-width: 415px) {
+        flex-direction: column;
+        align-items: center;
+        width: 95vw;
+        padding: 0.5rem 0.2rem;
+        font-size: 1.3rem;
+        line-height: 2rem;
+      }
+
       .about_lan {
         color: var(--my-about_lan);
         font-weight: bold;
@@ -43,15 +59,8 @@
   .about_expertise {
     width: 80vw;
 
-    .ex_title {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 5rem;
-      font-weight: bold;
-      color: var(--my-ex_title);
-      margin-top: 10vh;
-      text-shadow: 0.3rem 0.3rem 0 var(--my-ex_title_shadow);
+    @media (max-width: 415px) {
+      width: 95vw;
     }
 
     .ex_content {
@@ -63,6 +72,7 @@
       margin-top: 5vh;
 
       .content_header {
+        box-sizing: border-box !important;
         display: flex;
         justify-content: start;
         align-items: center;
@@ -70,11 +80,12 @@
         padding: 0 1rem;
         background-color: var(--my-ex_content_header_back);
         color: var(--my-ex_content_header);
-        width: 100%;
         height: 8vh;
+        width: 100%;
         font-size: 1.5rem;
       }
       .content_list {
+        box-sizing: border-box !important;
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -82,11 +93,21 @@
         background-color: var(--my-ex_content_list_back);
         width: 100%;
 
+        @media (max-width: 415px) {
+          flex-direction: column;
+          padding: 1rem;
+        }
+
         .content {
           box-sizing: border-box;
           padding: 1rem;
           width: 33.33%;
           height: 45vh;
+
+          @media (max-width: 415px) {
+            flex-direction: column;
+            width: 100%;
+          }
 
           .content_title {
             font-size: 4vh;

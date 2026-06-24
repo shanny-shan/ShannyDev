@@ -1,54 +1,21 @@
 <script setup>
-import { onMounted, onUnmounted } from 'vue'
-
 import Header from '@/views/Header.vue'
+import HeaderMobile from '@/views/HeaderMobile.vue'
 import About from '@/views/About.vue'
 import Resume from '@/views/Resume.vue'
 import Project from '@/views/Project.vue'
 import Contact from '@/views/Contact.vue'
-
-import { useHeaderStore } from '@/stores'
-const headerStore = useHeaderStore()
-const handleScroll = () => {
-  const scrollTop = window.scrollY
-  const clientHeight = document.documentElement.clientHeight
-  const pageHeight = document.documentElement.scrollHeight
-  const list = headerStore.anchorList
-
-  if (scrollTop + clientHeight >= pageHeight - 50) {
-    headerStore.headerActive = list.length - 1
-    return
-  }
-
-  let current = 0
-  for (let i = 0; i < list.length; i++) {
-    const el = document.getElementById(list[i])
-    if (!el) continue
-
-    const rect = el.getBoundingClientRect()
-    if (rect.top <= 200) {
-      current = i
-    }
-  }
-
-  headerStore.headerActive = current
-}
-
-onMounted(() => {
-  window.addEventListener('scroll', handleScroll)
-  handleScroll()
-})
-
-onUnmounted(() => {
-  window.removeEventListener('scroll', handleScroll)
-})
+import { useScrollStore, useUtilStore } from '@/stores'
+const utilStore = useUtilStore()
+const scrollStore = useScrollStore()
 </script>
 
 <template>
   <div class="common-layout">
     <el-container>
       <el-header class="header">
-        <Header />
+        <HeaderMobile v-if="utilStore.isMobile" />
+        <Header v-else />
       </el-header>
       <el-main class="main">
         <About />

@@ -35,6 +35,28 @@
       padding: 0;
     }
 
+    .ant-layout {
+      height: 100%;
+      background-color: var(--my-body_bg) !important;
+    }
+    :where(.css-dev-only-do-not-override-ypkju9).ant-layout,
+    :where(.css-dev-only-do-not-override-ypkju9).ant-layout * {
+      box-sizing: content-box !important;
+    }
+
+    .ant-drawer-content-wrapper {
+      width: 50vw !important;
+    }
+    .ant-drawer-body {
+      background-color: var(--my-drawer-back) !important;
+      display: flex;
+      flex-direction: column;
+
+      a {
+        padding: 0.5rem !important;
+      }
+    }
+
     .ant-collapse {
       border: none;
 

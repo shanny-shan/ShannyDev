@@ -93,6 +93,7 @@ const handleSubmit = async () => {
   align-items: center;
 
   .contact_sub_title {
+    box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -102,6 +103,10 @@ const handleSubmit = async () => {
     padding: 0.2rem 1rem;
     margin-top: 5vh;
     box-shadow: 0.3rem 0.3rem 0 var(--my-about_msg_shadow);
+
+    @media (max-width: 415px) {
+      width: 95vw;
+    }
   }
   .contact_content {
     display: flex;
@@ -110,17 +115,29 @@ const handleSubmit = async () => {
     align-items: center;
     margin-top: 5vh;
 
+    @media (max-width: 415px) {
+      width: 95vw;
+    }
+
     .el-input {
       height: 7vh;
       width: 45vw;
       font-size: 1rem;
       --el-input-focus-border-color: var(--my-input_focus_border);
       box-shadow: 0.5rem 0.5rem 0 var(--my-form_shadow);
+
+      @media (max-width: 415px) {
+        width: 100%;
+      }
     }
     .el-textarea {
       font-size: 1rem;
       --el-input-focus-border-color: var(--my-input_focus_border);
       box-shadow: 0.5rem 0.5rem 0 var(--my-form_shadow);
+
+      @media (max-width: 415px) {
+        width: 100%;
+      }
     }
     .input_email,
     .input_message {
@@ -138,6 +155,10 @@ const handleSubmit = async () => {
       border-color: var(--my-btn_primary_border);
       color: var(--my-btn_primary_text);
       box-shadow: 0.25rem 0.25rem 0 var(--my-btn_primary_shadow);
+
+      @media (max-width: 415px) {
+        width: 85vw;
+      }
     }
     .el-button:hover {
       background-color: var(--my-btn_primary_hover_bg);

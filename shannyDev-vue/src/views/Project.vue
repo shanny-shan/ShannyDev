@@ -95,6 +95,10 @@ const handleError = (e) => {
     width: 80vw;
     margin-top: 5vh;
 
+    @media (max-width: 415px) {
+      width: 95vw;
+    }
+
     .project_item {
       box-sizing: border-box;
       display: flex;
@@ -102,6 +106,11 @@ const handleError = (e) => {
       justify-content: center;
       width: calc(100% / 3);
       padding: 1rem;
+
+      @media (max-width: 415px) {
+        width: 100%;
+      }
+
       .card_blue {
         background-color: var(--my-card_blue_back);
         box-shadow: 1rem 1rem 0 var(--my-card_blue_shadow);

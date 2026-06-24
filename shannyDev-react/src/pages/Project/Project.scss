@@ -24,10 +24,21 @@
     width: 80vw;
     margin-top: 5vh;
 
+    @media (max-width: 415px) {
+      width: 95vw;
+    }
+
     .project_item {
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
       width: calc(100% / 3);
       padding: 1rem;
-      box-sizing: border-box !important;
+
+      @media (max-width: 415px) {
+        width: 100%;
+      }
 
       .card_blue {
         background-color: var(--my-card_blue_back);
@@ -40,9 +51,9 @@
       .ant-card {
         cursor: pointer;
         border: none;
+        border-radius: 0;
         border-right: 0.1rem solid var(--my-card_border);
         border-bottom: 0.1rem solid var(--my-card_border);
-        border-radius: 0;
 
         img {
           width: 100%;

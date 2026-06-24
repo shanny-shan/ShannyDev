@@ -1,47 +1,12 @@
 import { Affix } from 'antd'
 import LinkComponent from '@/components/Link/Link'
 import { useHeaderStore, useLanguageStore } from '@/stores'
-// import { SunOutlined, MoonOutlined } from '@ant-design/icons'
-import { useState, useEffect } from 'react'
 import styles from './Header.module.scss'
 
 const Header = () => {
-  const headerStore = useHeaderStore()
-  const setHeaderActive = headerStore.setHeaderActive
+  const { changeHeader } = useHeaderStore()
   const languageStore = useLanguageStore()
   const text = languageStore.text()
-
-  const getInitialTheme = (): 'dark' | 'light' => {
-    const stored = localStorage.getItem('theme') as 'dark' | 'light' | null
-    if (stored) return stored
-    const prefersDark = window.matchMedia(
-      '(prefers-color-scheme: dark)',
-    ).matches
-    return prefersDark ? 'dark' : 'light'
-  }
-
-  const [theme, setTheme] = useState<'dark' | 'light'>(getInitialTheme)
-
-  // const toggleTheme = () => {
-  //   setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'))
-  // }
-
-  useEffect(() => {
-    const root = document.documentElement
-    root.classList.toggle('dark', theme === 'dark')
-    root.classList.toggle('light', theme === 'light')
-    localStorage.setItem('theme', theme)
-  }, [theme])
-
-  useEffect(() => {
-    const media = window.matchMedia('(prefers-color-scheme: dark)')
-    const handler = (e: MediaQueryListEvent) =>
-      setTheme(e.matches ? 'dark' : 'light')
-    media.addEventListener('change', handler)
-    return () => media.removeEventListener('change', handler)
-  }, [])
-
-  const changeHeader = (idx: number) => setHeaderActive(idx)
 
   return (
     <Affix offsetTop={0} style={{ width: '100%' }}>
@@ -55,7 +20,6 @@ const Header = () => {
             clickFunction={() => changeHeader(0)}
           />
         </div>
-
         <div className={styles['header_center']}>
           <LinkComponent
             href="#about"
@@ -82,7 +46,6 @@ const Header = () => {
             clickFunction={() => changeHeader(3)}
           />
         </div>
-
         <div className={styles['header_right']}>
           <LinkComponent
             href="https://www.shanny.wang"
@@ -95,12 +58,6 @@ const Header = () => {
             position="right"
             clickFunction={languageStore.toggleLang}
           />
-          {/* <LinkComponent
-            isIcon
-            icon={theme === 'dark' ? <MoonOutlined /> : <SunOutlined />}
-            position="right"
-            clickFunction={toggleTheme}
-          /> */}
         </div>
       </div>
     </Affix>

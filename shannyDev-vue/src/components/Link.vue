@@ -34,6 +34,10 @@ defineProps({
     type: String,
     default: '_self',
   },
+  isMobile: {
+    type: Boolean,
+    default: false,
+  },
 })
 </script>
 <template>
@@ -43,6 +47,7 @@ defineProps({
     :class="{
       active: active !== null && headerStore.headerActive === active,
       isIcon: isIcon,
+      isMobile: isMobile,
     }"
     @click="clickFunction?.()"
     :href="href"
@@ -53,9 +58,9 @@ defineProps({
       v-if="!isIcon"
       :class="position === 'center' ? 'header_text' : 'header_left_text'"
     >
-      <span class="bracket left">[&nbsp;</span>
+      <span class="bracket left" v-if="!isMobile">[&nbsp;</span>
       <span class="print_text">{{ text }}</span>
-      <span class="bracket right">&nbsp;]</span>
+      <span class="bracket right" v-if="!isMobile">&nbsp;]</span>
     </span>
   </el-link>
 </template>
@@ -71,7 +76,7 @@ defineProps({
   color: var(--my-header_text_hover);
 }
 .header_left_text,
-.isIcon:hover {
+.isIcon:not(.isMobile):hover {
   color: var(--my-header_left_text);
 }
 

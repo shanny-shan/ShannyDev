@@ -12,12 +12,16 @@ const languageStore = useLanguageStore()
         <div>{{ languageStore.text.aboutTitleTwo }}</div>
       </div>
       <div class="about_msg">
-        {{ languageStore.text.aboutContentOne }}
-        <span class="about_lan">&nbsp;Vue3&nbsp;</span>
-        {{ languageStore.text.aboutContentTwo }}
-        {{ languageStore.text.aboutContentThree }}
-        <span class="about_lan">&nbsp;.NET、Java&nbsp;</span>
-        {{ languageStore.text.aboutContentFour }}
+        <span>
+          {{ languageStore.text.aboutContentOne }}
+          <span class="about_lan"> Vue3 </span>
+          {{ languageStore.text.aboutContentTwo }}
+        </span>
+        <span>
+          {{ languageStore.text.aboutContentThree }}
+          <span class="about_lan"> .NET、Java </span>
+          {{ languageStore.text.aboutContentFour }}
+        </span>
         {{ languageStore.text.aboutContentFive }}
       </div>
     </div>
@@ -91,9 +95,16 @@ const languageStore = useLanguageStore()
       font-size: 5rem;
       color: var(--my-about_name);
       text-shadow: 0.25rem 0.25rem 0 var(--my-about_name_shadow);
+
+      @media (max-width: 415px) {
+        width: 95vw;
+        font-size: 2.5rem !important;
+        text-shadow: 0.15rem 0.15rem 0 var(--my-about_name_shadow);
+      }
     }
 
     .about_msg {
+      box-sizing: border-box;
       display: flex;
       flex-direction: row;
       justify-content: center;
@@ -105,6 +116,15 @@ const languageStore = useLanguageStore()
       margin-top: 5vh;
       box-shadow: 0.3rem 0.3rem 0 var(--my-about_msg_shadow);
 
+      @media (max-width: 415px) {
+        flex-direction: column;
+        align-items: center;
+        width: 95vw;
+        padding: 0.5rem 0.2rem;
+        font-size: 1.3rem;
+        line-height: 2rem;
+      }
+
       .about_lan {
         color: var(--my-about_lan);
         font-weight: bold;
@@ -114,6 +134,10 @@ const languageStore = useLanguageStore()
 
   .about_expertise {
     width: 80vw;
+
+    @media (max-width: 415px) {
+      width: 95vw;
+    }
 
     .ex_content {
       display: flex;
@@ -143,11 +167,20 @@ const languageStore = useLanguageStore()
         background-color: var(--my-ex_content_list_back);
         width: 100%;
 
+        @media (max-width: 415px) {
+          flex-direction: column;
+        }
+
         .content {
           box-sizing: border-box;
           padding: 1rem;
           width: 33.33%;
           height: 45vh;
+
+          @media (max-width: 415px) {
+            flex-direction: column;
+            width: 100%;
+          }
 
           .content_title {
             font-size: 4vh;

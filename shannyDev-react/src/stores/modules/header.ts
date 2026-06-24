@@ -1,13 +1,17 @@
 import { create } from 'zustand'
 
-interface HeaderStore {
+interface HeaderState {
   headerActive: number
   anchorList: string[]
-  setHeaderActive: (index: number) => void
+  drawer: boolean
+  changeHeader: (num: number) => void
+  setDrawer: (val: boolean) => void
 }
 
-export const useHeaderStore = create<HeaderStore>((set) => ({
+export const useHeaderStore = create<HeaderState>((set) => ({
   headerActive: 0,
   anchorList: ['about', 'resume', 'project', 'contact'],
-  setHeaderActive: (index) => set({ headerActive: index }),
+  drawer: false,
+  changeHeader: (num) => set({ headerActive: num, drawer: false }),
+  setDrawer: (val) => set({ drawer: val }),
 }))

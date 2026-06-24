@@ -35,6 +35,22 @@
       padding: 0;
     }
 
+    .el-drawer {
+      background-color: var(--my-drawer-back);
+      width: 50vw !important;
+
+      .el-drawer__body {
+        overflow-x: hidden;
+
+        .el-link {
+          padding: 1rem 1rem;
+          display: flex;
+          flex-direction: row;
+          justify-content: start;
+        }
+      }
+    }
+
     .el-input,
     .el-textarea {
       .el-input__wrapper,

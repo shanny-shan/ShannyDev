@@ -1,23 +1,9 @@
 <script setup>
 import Link from '@/components/Link.vue'
-
-import { ref, onMounted } from 'vue'
-import { useHeaderStore, useLanguageStore } from '@/stores'
-
 import { Sunny, Moon } from '@element-plus/icons-vue'
-import { useColorMode } from '@vueuse/core'
-
+import { useHeaderStore, useLanguageStore } from '../stores/'
 const headerStore = useHeaderStore()
 const languageStore = useLanguageStore()
-
-const changeHeader = (e) => {
-  headerStore.headerActive = e
-}
-
-const { store, state } = useColorMode()
-const toggleTheme = () => {
-  store.value = store.value === 'dark' ? 'light' : 'dark'
-}
 </script>
 
 <template>
@@ -29,7 +15,7 @@ const toggleTheme = () => {
           href="https://www.shanny.wang"
           text="www.shanny.wang"
           position="left"
-          :clickFunction="() => changeHeader(0)"
+          :clickFunction="() => headerStore.changeHeader(0)"
         />
       </div>
       <div class="header_center">
@@ -37,25 +23,25 @@ const toggleTheme = () => {
           href="#about"
           :active="0"
           :text="languageStore.text.about"
-          :clickFunction="() => changeHeader(0)"
+          :clickFunction="() => headerStore.changeHeader(0)"
         />
         <Link
           href="#resume"
           :active="1"
           :text="languageStore.text.resume"
-          :clickFunction="() => changeHeader(1)"
+          :clickFunction="() => headerStore.changeHeader(1)"
         />
         <Link
           href="#project"
           :active="2"
           :text="languageStore.text.project"
-          :clickFunction="() => changeHeader(2)"
+          :clickFunction="() => headerStore.changeHeader(2)"
         />
         <Link
           href="#contact"
           :active="3"
           :text="languageStore.text.contact"
-          :clickFunction="() => changeHeader(3)"
+          :clickFunction="() => headerStore.changeHeader(3)"
         />
       </div>
       <div class="header_right">
@@ -74,7 +60,7 @@ const toggleTheme = () => {
           :isIcon="true"
           :icon="state === 'dark' ? Moon : Sunny"
           position="right"
-          :clickFunction="toggleTheme"
+          :clickFunction="headerStore.toggleTheme"
         /> -->
       </div>
     </div>

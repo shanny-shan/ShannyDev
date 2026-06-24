@@ -15,6 +15,7 @@
     text-shadow: 0.3rem 0.3rem 0 var(--my-contact_title_shadow);
   }
   .contact_sub_title {
+    box-sizing: border-box !important;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,6 +25,10 @@
     padding: 0.2rem 1rem;
     margin-top: 5vh;
     box-shadow: 0.3rem 0.3rem 0 var(--my-about_msg_shadow);
+
+    @media (max-width: 415px) {
+      width: 95vw;
+    }
   }
   .contact_content {
     display: flex;
@@ -32,13 +37,22 @@
     align-items: center;
     margin-top: 5vh;
 
+    @media (max-width: 415px) {
+      width: 95vw;
+    }
+
     .ant-input-affix-wrapper:not(.ant-input-textarea-affix-wrapper) {
+      box-sizing: border-box !important;
       background-color: var(--my-form_bg) !important;
       color: var(--my-form_text) !important;
       height: 7vh;
       width: 45vw;
       font-size: 1rem;
       box-shadow: 0.5rem 0.5rem 0 var(--my-form_shadow);
+
+      @media (max-width: 415px) {
+        width: 100%;
+      }
 
       ::placeholder {
         color: var(--my-form_text) !important;
@@ -55,6 +69,10 @@
       font-size: 1rem;
       box-shadow: 0.5rem 0.5rem 0 var(--my-form_shadow);
       border-radius: 0.5rem;
+
+      @media (max-width: 415px) {
+        width: 100%;
+      }
 
       ::placeholder {
         color: var(--my-form_text) !important;
@@ -84,6 +102,10 @@
       box-shadow: 0.25rem 0.25rem 0 var(--my-btn_primary_shadow);
       border-radius: 0;
       margin-bottom: 10vh !important;
+
+      @media (max-width: 415px) {
+        width: 85vw;
+      }
     }
     .ant-btn:hover {
       background-color: var(--my-btn_primary_hover_bg);

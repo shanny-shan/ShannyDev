@@ -14,6 +14,7 @@ interface LinkComponentProps {
   text?: string
   position?: 'center' | 'left' | 'right'
   target?: string
+  isMobile?: boolean
 }
 
 const LinkComponent = ({
@@ -25,6 +26,7 @@ const LinkComponent = ({
   text = '',
   position = 'center',
   target = '_self',
+  isMobile = false,
 }: LinkComponentProps) => {
   const headerStore = useHeaderStore()
   const isActive = active !== null && headerStore.headerActive === active
@@ -33,6 +35,7 @@ const LinkComponent = ({
     styles['header-item'],
     isActive ? styles.active : '',
     isIcon ? styles.isIcon : '',
+    isMobile ? styles.isMobile : '',
   ]
     .filter(Boolean)
     .join(' ')
@@ -40,19 +43,28 @@ const LinkComponent = ({
   const textWrapClass =
     position === 'center' ? styles.header_text : styles.header_left_text
 
+  const handleClick = () => {
+    // 只执行切换高亮，不拦截默认跳转，锚点正常滚动
+    if (clickFunction) clickFunction()
+  }
+
   return (
     <Link
       href={href}
       target={target}
       className={linkClassList}
-      onClick={clickFunction}
+      onClick={handleClick}
       underline={false}
     >
       {!isIcon ? (
         <span className={textWrapClass}>
-          <span className={`${styles.bracket} ${styles.left}`}>[&nbsp;</span>
+          {!isMobile && (
+            <span className={`${styles.bracket} ${styles.left}`}>[&nbsp;</span>
+          )}
           <span className={styles.print_text}>{text}</span>
-          <span className={`${styles.bracket} ${styles.right}`}>&nbsp;]</span>
+          {!isMobile && (
+            <span className={`${styles.bracket} ${styles.right}`}>&nbsp;]</span>
+          )}
         </span>
       ) : (
         icon
