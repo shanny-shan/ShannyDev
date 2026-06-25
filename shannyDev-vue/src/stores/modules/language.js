@@ -5,6 +5,7 @@ import zhCN from '@/lang/zh-cn'
 import en from '@/lang/en'
 
 export const useLanguageStore = defineStore('language', () => {
+  const VALID_LANGS = ['zh-cn', 'en']
   const lang = useStorage('lang', 'zh-cn')
 
   const text = computed(() => {
@@ -22,5 +23,6 @@ export const useLanguageStore = defineStore('language', () => {
     lang,
     text,
     toggleLang,
+    VALID_LANGS,
   }
 })

@@ -1,7 +1,12 @@
 import { defineStore } from 'pinia'
-import { ref, onMounted } from 'vue'
+import { ref } from 'vue'
+import defaultImg from '@/assets/images/loading.gif'
+import { useLanguageStore } from '@/stores'
 
 export const useUtilStore = defineStore('util', () => {
+  const languageStore = useLanguageStore()
+
+  const defaultImage = ref(defaultImg)
   const isMobile = ref(false)
   const checkMobile = () => {
     if (typeof navigator === 'undefined') return false
@@ -10,9 +15,25 @@ export const useUtilStore = defineStore('util', () => {
     isMobile.value = reg.test(navigator.userAgent)
   }
 
-  onMounted(() => {
-    checkMobile()
-  })
+  // image
+  const handleLoad = (e, item) => {
+    if (!e.target.dataset.done) {
+      e.target.dataset.done = '1'
+      e.target.src =
+        languageStore.lang === 'zh-cn' ? item.imageCN : item.imageEN
+    }
+  }
 
-  return { isMobile }
+  const handleError = (e) => {
+    e.target.dataset.done = '1'
+    e.target.src = defaultImage
+  }
+
+  return {
+    defaultImage,
+    isMobile,
+    checkMobile,
+    handleLoad,
+    handleError,
+  }
 })

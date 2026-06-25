@@ -5,9 +5,17 @@ import About from '@/views/About.vue'
 import Resume from '@/views/Resume.vue'
 import Project from '@/views/Project.vue'
 import Contact from '@/views/Contact.vue'
-import { useScrollStore, useUtilStore } from '@/stores'
+import { useScrollStore, useUtilStore, useLanguageStore } from '@/stores'
+import { onMounted } from 'vue'
 const utilStore = useUtilStore()
 const scrollStore = useScrollStore()
+const languageStore = useLanguageStore()
+onMounted(() => {
+  if (!languageStore.VALID_LANGS.includes(languageStore.lang)) {
+    languageStore.lang = 'zh-cn'
+  }
+  utilStore.checkMobile()
+})
 </script>
 
 <template>

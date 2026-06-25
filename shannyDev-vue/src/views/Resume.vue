@@ -1,18 +1,18 @@
 <script setup>
 import Title from '@/components/Title.vue'
-import { useLanguageStore } from '@/stores'
+import { useLanguageStore, useResumeStore } from '@/stores'
 import { Plus } from '@element-plus/icons-vue'
 import { ref } from 'vue'
 
-const activeResume = ref('1')
 const languageStore = useLanguageStore()
+const resumeStore = useResumeStore()
 </script>
 
 <template>
   <div class="resume">
     <Title :title="languageStore.text.resumeTitle" />
     <div class="collapse">
-      <el-collapse v-model="activeResume" accordion>
+      <el-collapse v-model="resumeStore.activeResume" accordion>
         <el-collapse-item name="1" :icon="Plus">
           <template #title="{ isActive }">
             <div class="collapse_title">

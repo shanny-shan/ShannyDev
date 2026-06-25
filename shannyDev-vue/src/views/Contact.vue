@@ -2,47 +2,10 @@
 import Title from '@/components/Title.vue'
 import { ref } from 'vue'
 import { CloseBold } from '@element-plus/icons-vue'
-import { useLanguageStore } from '@/stores'
-import { ElMessage } from 'element-plus'
-import emailjs from '@emailjs/browser'
+import { useLanguageStore, useContactStore } from '@/stores'
 
 const languageStore = useLanguageStore()
-
-const inputName = ref('')
-const inputEmail = ref('')
-const inputMessage = ref('')
-const loading = ref(false)
-
-const handleSubmit = async () => {
-  if (!inputName.value || !inputEmail.value || !inputMessage.value) {
-    ElMessage.warning(languageStore.text.formRequired)
-    return
-  }
-  loading.value = true
-  try {
-    const templateParams = {
-      name: inputName.value,
-      email: inputEmail.value,
-      message: inputMessage.value,
-      reply_to: inputEmail.value,
-    }
-    await emailjs.send(
-      'service_8dudqbm',
-      'template_xb7nvew',
-      templateParams,
-      'XGFbMQhsBdx6cR_vA',
-    )
-    ElMessage.success(languageStore.text.sendSuccess)
-    inputName.value = ''
-    inputEmail.value = ''
-    inputMessage.value = ''
-  } catch (err) {
-    ElMessage.error(languageStore.text.sendFailed)
-    console.log(err)
-  } finally {
-    loading.value = false
-  }
-}
+const contactStore = useContactStore()
 </script>
 
 <template>
@@ -54,21 +17,21 @@ const handleSubmit = async () => {
     <div class="contact_content">
       <el-input
         class="input_name"
-        v-model="inputName"
+        v-model="contactStore.inputName"
         :placeholder="languageStore.text.contactNamePlaceholder"
         clearable
         :clear-icon="CloseBold"
       />
       <el-input
         class="input_email"
-        v-model="inputEmail"
+        v-model="contactStore.inputEmail"
         :placeholder="languageStore.text.contactEmailPlaceholder"
         clearable
         :clear-icon="CloseBold"
       />
       <el-input
         class="input_message"
-        v-model="inputMessage"
+        v-model="contactStore.inputMessage"
         :rows="5"
         type="textarea"
         :placeholder="languageStore.text.contactMessagePlaceholder"
@@ -77,7 +40,11 @@ const handleSubmit = async () => {
       />
     </div>
     <div class="submit_button">
-      <el-button type="primary" @click="handleSubmit" :loading="loading">
+      <el-button
+        type="primary"
+        @click="contactStore.handleSubmit"
+        :loading="contactStore.loading"
+      >
         {{ languageStore.text.submit }}
       </el-button>
     </div>

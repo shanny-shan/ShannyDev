@@ -1,69 +1,29 @@
 <script setup>
 import Title from '@/components/Title.vue'
 import { ref } from 'vue'
-import defaultImage from '@/assets/images/loading.gif'
-import { useLanguageStore } from '@/stores'
+import { useLanguageStore, useProjectStore, useUtilStore } from '@/stores'
 const languageStore = useLanguageStore()
-
-const projectList = ref([
-  {
-    id: 0,
-    href: 'https://www.shanny.wang',
-    color: 'blue',
-    imageCN:
-      'https://beijing-files.oss-cn-beijing.aliyuncs.com/shanny-dev/images/dev_cn.png',
-    imageEN:
-      'https://beijing-files.oss-cn-beijing.aliyuncs.com/shanny-dev/images/dev_en.png',
-    titleCN: '个人作品集网站',
-    titleEN: 'Personal Portfolio Website',
-    msgCN:
-      '这里是我的个人前端作品集，收录项目开发案例，记录技术成长与实战经验。',
-    msgEN:
-      'This is my personal frontend portfolio that displays practical projects and records technical experience.',
-  },
-  {
-    id: 1,
-    color: 'pink',
-    href: 'https://www.shanny.work',
-    imageCN:
-      'https://beijing-files.oss-cn-beijing.aliyuncs.com/shanny-dev/images/blog.png',
-    imageEN:
-      'https://beijing-files.oss-cn-beijing.aliyuncs.com/shanny-dev/images/blog.png',
-    titleCN: '个人博客网站',
-    titleEN: 'Personal Blog Website',
-    msgCN: '这里是我的个人博客网站，记录技术分享与生活感悟。',
-    msgEN:
-      'This is my personal blog website that records technical insights and life reflections.',
-  },
-])
-
-const clickProject = (href) => {
-  window.open(href, '_blank')
-}
-
-const handleLoad = (e, item) => {
-  if (!e.target.dataset.done) {
-    e.target.dataset.done = '1'
-    e.target.src = languageStore.lang === 'zh-cn' ? item.imageCN : item.imageEN
-  }
-}
-
-const handleError = (e) => {
-  e.target.dataset.done = '1'
-  e.target.src = defaultImage
-}
+const projectStore = useProjectStore()
+const utilStore = useUtilStore()
 </script>
 
 <template>
   <div class="project">
     <Title :title="languageStore.text.projectTitle" />
     <div class="project_list">
-      <div class="project_item" v-for="item in projectList" :key="item.id">
-        <el-card :class="'card_' + item.color" @click="clickProject(item.href)">
+      <div
+        class="project_item"
+        v-for="item in projectStore.projectList"
+        :key="item.id"
+      >
+        <el-card
+          :class="'card_' + item.color"
+          @click="projectStore.clickProject(item.href)"
+        >
           <img
-            :src="defaultImage"
-            @load="(e) => handleLoad(e, item)"
-            @error="handleError"
+            :src="utilStore.defaultImage"
+            @load="(e) => utilStore.handleLoad(e, item)"
+            @error="utilStore.handleError"
           />
           <div class="card_content">
             <div class="card_title">
